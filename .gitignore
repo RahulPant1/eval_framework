@@ -1,0 +1,4 @@
+__pycache__/evaluation.cpython-311.pyc
+__pycache__/llm_handlers.cpython-311.pyc
+__pycache__/report_generator.cpython-311.pyc
+chroma_dev/chroma.sqlite3

@@ -27,9 +27,9 @@ class BaseLLMHandler:
         """Generate modified versions of a question"""
         raise NotImplementedError
         
-    def generate_rag_response(self, question: str, context: str) -> str:
-        """Generate a response based on the question and context"""
-        raise NotImplementedError
+    # def generate_rag_response(self, question: str, context: str) -> str:
+    #     """Generate a response based on the question and context"""
+    #     raise NotImplementedError
 
 class GeminiLLMHandler(BaseLLMHandler):
     """Handler for Gemini 1.5 Flash LLM"""
@@ -131,26 +131,26 @@ class GeminiLLMHandler(BaseLLMHandler):
             return [f"Error generating answer: {str(e)}"] * len(questions)
 
     
-    def generate_rag_response(self, question: str, context: str) -> str:
-        """
-        Generate a response based on the question and context using Gemini 1.5 Flash.
+    # def generate_rag_response(self, question: str, context: str) -> str:
+    #     """
+    #     Generate a response based on the question and context using Gemini 1.5 Flash.
         
-        Args:
-            question: Question to answer
-            context: Context for answering the question
+    #     Args:
+    #         question: Question to answer
+    #         context: Context for answering the question
             
-        Returns:
-            Generated response
-        """
-        try:
-            prompt = f"Answer the following question based on the context: Question: {question}\n\nContext: {context}"
-            logging.info(f"Prompt sent to Gemini model: {prompt}")
-            response = self.model.generate_content(prompt)
-            logging.info(f"Received response from Gemini model: {response}")
-            return response.text
-        except Exception as e:
-            logging.error(f"Error generating RAG response with Gemini: {e}")
-            return f"Error generating response: {str(e)}"
+    #     Returns:
+    #         Generated response
+    #     """
+    #     try:
+    #         prompt = f"Answer the following question based on the context: Question: {question}\n\nContext: {context}"
+    #         logging.info(f"Prompt sent to Gemini model: {prompt}")
+    #         response = self.model.generate_content(prompt)
+    #         logging.info(f"Received response from Gemini model: {response}")
+    #         return response.text
+    #     except Exception as e:
+    #         logging.error(f"Error generating RAG response with Gemini: {e}")
+    #         return f"Error generating response: {str(e)}"
 
 class Llama2LLMHandler(BaseLLMHandler):
     """Handler for Llama 2 LLM"""
@@ -194,20 +194,20 @@ class Llama2LLMHandler(BaseLLMHandler):
             f"Restructured: Have you considered {question.lower()}?"
         ]
     
-    def generate_rag_response(self, question: str, context: str) -> str:
-        """
-        Generate a response based on the question and context using Llama 2.
-        This is a simplified implementation with placeholder functionality.
+    # def generate_rag_response(self, question: str, context: str) -> str:
+    #     """
+    #     Generate a response based on the question and context using Llama 2.
+    #     This is a simplified implementation with placeholder functionality.
         
-        Args:
-            question: Question to answer
-            context: Context for answering the question
+    #     Args:
+    #         question: Question to answer
+    #         context: Context for answering the question
             
-        Returns:
-            Generated response
-        """
-        # Placeholder implementation
-        return f"Based on the provided context, the answer to '{question}' is related to {context[:self.chunk_content_size]}..."
+    #     Returns:
+    #         Generated response
+    #     """
+    #     # Placeholder implementation
+    #     return f"Based on the provided context, the answer to '{question}' is related to {context[:self.chunk_content_size]}..."
 
 def get_llm_handler(db, llm_name: str = "Gemini 1.5 Flash") -> BaseLLMHandler:
     """

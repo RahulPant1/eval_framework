@@ -1,0 +1,173 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>RAG Evaluation Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #2c3e50; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            .summary { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+            .metrics { margin-bottom: 20px; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .success { color: green; }
+            .failure { color: red; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>RAG Evaluation Report</h1>
+            <p>Generated: 2025-04-08T00:15:47.342035</p>
+            <p>Report ID: 67f41d5b2b9c1a4e0ae5eec1</p>
+            
+            <div class="summary">
+                <h2>Evaluation Summary</h2>
+                <p><strong>Test Suite:</strong> Test Suite for Dataset 67f41d272b9c1a4e0ae5eeb6</p>
+                <p><strong>Dataset:</strong> sample_data.csv</p>
+                <p><strong>LLM:</strong> Gemini 1.5 Flash</p>
+                <p><strong>Number of Tests:</strong> 9</p>
+                <p><strong>Success Rate:</strong> 100.00%</p>
+            </div>
+            
+            <div class="metrics">
+                <h2>Aggregate Metrics</h2>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Average</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                    <tr>
+                        <td>BLEU</td>
+                        <td>0.2023</td>
+                        <td>0.0251</td>
+                        <td>0.4903</td>
+                    </tr>
+                    <tr>
+                        <td>ROUGE-1 F1</td>
+                        <td>0.4270</td>
+                        <td colspan="2">-</td>
+                    </tr>
+                    <tr>
+                        <td>ROUGE-2 F1</td>
+                        <td>0.2572</td>
+                        <td colspan="2">-</td>
+                    </tr>
+                    <tr>
+                        <td>ROUGE-L F1</td>
+                        <td>0.3694</td>
+                        <td colspan="2">-</td>
+                    </tr>
+                    <tr>
+                        <td>METEOR</td>
+                        <td>0.6754</td>
+                        <td>0.4305</td>
+                        <td>0.9477</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="per-question">
+                <h2>Per-Question Metrics</h2>
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Question</th>
+                        <th>Success</th>
+                        <th>BLEU</th>
+                        <th>ROUGE-1 F1</th>
+                        <th>METEOR</th>
+                    </tr>
+    
+                    <tr>
+                        <td>1</td>
+                        <td>What is the Retrieval-Augmented Generation (RAG) approach?</td>
+                        <td class="success">Yes</td>
+                        <td>0.1834</td>
+                        <td>0.4938</td>
+                        <td>0.6870</td>
+                    </tr>
+        
+                    <tr>
+                        <td>2</td>
+                        <td>What problem does RAG address in large language models?</td>
+                        <td class="success">Yes</td>
+                        <td>0.3757</td>
+                        <td>0.6071</td>
+                        <td>0.8043</td>
+                    </tr>
+        
+                    <tr>
+                        <td>3</td>
+                        <td>What are the two main components of the RAG approach?</td>
+                        <td class="success">Yes</td>
+                        <td>0.2014</td>
+                        <td>0.3729</td>
+                        <td>0.6672</td>
+                    </tr>
+        
+                    <tr>
+                        <td>4</td>
+                        <td>What type of data do vector databases store and query?</td>
+                        <td class="success">Yes</td>
+                        <td>0.2981</td>
+                        <td>0.6296</td>
+                        <td>0.7975</td>
+                    </tr>
+        
+                    <tr>
+                        <td>5</td>
+                        <td>What is the purpose of vector embeddings in a vector database?</td>
+                        <td class="success">Yes</td>
+                        <td>0.1037</td>
+                        <td>0.4118</td>
+                        <td>0.6517</td>
+                    </tr>
+        
+                    <tr>
+                        <td>6</td>
+                        <td>Name three examples of popular vector databases.</td>
+                        <td class="success">Yes</td>
+                        <td>0.4903</td>
+                        <td>0.7857</td>
+                        <td>0.9477</td>
+                    </tr>
+        
+                    <tr>
+                        <td>7</td>
+                        <td>What are the two main categories of evaluation metrics for Retrieval Augmented Generation (RAG) systems?</td>
+                        <td class="success">Yes</td>
+                        <td>0.0251</td>
+                        <td>0.2000</td>
+                        <td>0.6470</td>
+                    </tr>
+        
+                    <tr>
+                        <td>8</td>
+                        <td>Give examples of metrics used to assess the quality of document retrieval in RAG systems.</td>
+                        <td class="success">Yes</td>
+                        <td>0.0647</td>
+                        <td>0.0465</td>
+                        <td>0.4454</td>
+                    </tr>
+        
+                    <tr>
+                        <td>9</td>
+                        <td>What type of metrics evaluate the quality of the generated text in a RAG system, and provide examples.</td>
+                        <td class="success">Yes</td>
+                        <td>0.0786</td>
+                        <td>0.2951</td>
+                        <td>0.4305</td>
+                    </tr>
+        
+                </table>
+            </div>
+    
+        </div>
+    </body>
+    </html>
+    

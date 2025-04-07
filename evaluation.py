@@ -358,7 +358,7 @@ def generate_metrics_report(db, evaluation_run_id, output_format="json", output_
     
     try:
         # Call the report generator function
-        report_path = generate_report(db, evaluation_run_id, output_format, output_dir)
+        report_path = generate_report(db, evaluation_run_id, [output_format], output_dir)
         logging.info(f"Generated metrics report at: {report_path}")
         return report_path
     except Exception as e:
