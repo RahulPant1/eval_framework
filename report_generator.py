@@ -9,18 +9,18 @@ from datetime import datetime
 import json
 import os
 
-def generate_metrics_report(db, evaluation_run_id, output_format="json", output_dir="reports"):
+def generate_metrics_report(db, evaluation_run_id, output_formats=["html", "markdown"], output_dir="reports"):
     """
     Generates a comprehensive metrics report from an evaluation run.
     
     Args:
         db: MongoDB database object
         evaluation_run_id: ID of the evaluation run to generate report for
-        output_format: Format of the report (json, txt, html)
+        output_formats: List of formats to generate (json, txt, html, markdown)
         output_dir: Directory to save the report
         
     Returns:
-        Path to the generated report file
+        Dictionary of paths to the generated report files
     """
     try:
         # Get evaluation run
@@ -71,27 +71,46 @@ def generate_metrics_report(db, evaluation_run_id, output_format="json", output_
         # Ensure output directory exists
         os.makedirs(output_dir, exist_ok=True)
         
-        # Generate report file
+        # Generate report files
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"rag_evaluation_report_{timestamp}"
         
-        if output_format == "json":
-            file_path = os.path.join(output_dir, f"{filename}.json")
-            with open(file_path, "w") as f:
-                json.dump(report, f, indent=2)
-        elif output_format == "txt":
-            file_path = os.path.join(output_dir, f"{filename}.txt")
-            with open(file_path, "w") as f:
-                write_text_report(f, report)
-        elif output_format == "html":
-            file_path = os.path.join(output_dir, f"{filename}.html")
-            with open(file_path, "w") as f:
-                write_html_report(f, report)
-        else:
-            raise ValueError(f"Unsupported output format: {output_format}")
+        output_paths = {}
+        
+        # If no formats specified, default to HTML and Markdown
+        if not output_formats:
+            output_formats = ["html", "markdown"]
             
-        logging.info(f"Generated metrics report: {file_path}")
-        return file_path
+        for output_format in output_formats:
+            if output_format == "json":
+                file_path = os.path.join(output_dir, f"{filename}.json")
+                with open(file_path, "w") as f:
+                    json.dump(report, f, indent=2)
+                output_paths["json"] = file_path
+                
+            elif output_format == "txt":
+                file_path = os.path.join(output_dir, f"{filename}.txt")
+                with open(file_path, "w") as f:
+                    write_text_report(f, report)
+                output_paths["txt"] = file_path
+                
+            elif output_format == "html":
+                file_path = os.path.join(output_dir, f"{filename}.html")
+                with open(file_path, "w") as f:
+                    write_html_report(f, report)
+                output_paths["html"] = file_path
+                
+            elif output_format == "markdown":
+                file_path = os.path.join(output_dir, f"{filename}.md")
+                with open(file_path, "w") as f:
+                    write_markdown_report(f, report)
+                output_paths["markdown"] = file_path
+                
+            else:
+                logging.warning(f"Unsupported output format: {output_format}")
+            
+        logging.info(f"Generated metrics reports: {', '.join(output_paths.values())}")
+        return output_paths
     
     except Exception as e:
         logging.error(f"Error generating metrics report: {e}")
@@ -375,3 +394,56 @@ def write_html_report(file, report):
     """
     
     file.write(html)
+
+
+def write_markdown_report(file, report):
+    """
+    Writes report in Markdown format.
+    
+    Args:
+        file: File object to write to
+        report: Report data
+    """
+    file.write(f"# RAG Evaluation Report\n\n")
+    file.write(f"Generated: {report['timestamp']}  \n")
+    file.write(f"Report ID: {report['report_id']}  \n\n")
+    
+    # Write summary
+    file.write(f"## Evaluation Summary\n\n")
+    file.write(f"- **Test Suite:** {report['evaluation_summary']['test_suite_name']}  \n")
+    file.write(f"- **Dataset:** {report['evaluation_summary']['dataset_name']}  \n")
+    file.write(f"- **LLM:** {report['evaluation_summary']['llm_name']}  \n")
+    file.write(f"- **Number of Tests:** {report['evaluation_summary']['num_tests']}  \n")
+    file.write(f"- **Success Rate:** {report['evaluation_summary']['success_rate']:.2%}  \n\n")
+    
+    # Write aggregate metrics
+    file.write(f"## Aggregate Metrics\n\n")
+    file.write("| Metric | Average | Min | Max |\n")
+    file.write("|--------|---------|-----|-----|\n")
+    file.write(f"| BLEU | {report['aggregate_metrics']['bleu']['average']:.4f} | {report['aggregate_metrics']['bleu']['min']:.4f} | {report['aggregate_metrics']['bleu']['max']:.4f} |\n")
+    file.write(f"| ROUGE-1 F1 | {report['aggregate_metrics']['rouge']['rouge-1']['f1']:.4f} | - | - |\n")
+    file.write(f"| ROUGE-2 F1 | {report['aggregate_metrics']['rouge']['rouge-2']['f1']:.4f} | - | - |\n")
+    file.write(f"| ROUGE-L F1 | {report['aggregate_metrics']['rouge']['rouge-l']['f1']:.4f} | - | - |\n")
+    file.write(f"| METEOR | {report['aggregate_metrics']['meteor']['average']:.4f} | {report['aggregate_metrics']['meteor']['min']:.4f} | {report['aggregate_metrics']['meteor']['max']:.4f} |\n\n")
+    
+    # Write per-question metrics
+    file.write(f"## Per-Question Metrics\n\n")
+    
+    for i, question in enumerate(report['per_question_metrics']):
+        file.write(f"### Question {i+1}: {question['question']}\n\n")
+        file.write(f"- **Success:** {'✅ Yes' if question['success'] else '❌ No'}  \n")
+        file.write(f"- **Explanation:** {question['explanation']}  \n")
+        file.write(f"- **Metrics:**  \n")
+        file.write(f"  - BLEU: {question['metrics']['bleu']:.4f}  \n")
+        file.write(f"  - ROUGE-1 F1: {question['metrics']['rouge']['rouge-1']['f1']:.4f}  \n")
+        file.write(f"  - METEOR: {question['metrics']['meteor']:.4f}  \n\n")
+    
+    # Write modified questions summary if available
+    if "modified_questions_summary" in report:
+        file.write(f"## Modified Questions Summary\n\n")
+        file.write(f"- **Number of Modified Questions:** {report['modified_questions_summary']['num_modified_questions']}  \n")
+        file.write(f"- **Success Rate:** {report['modified_questions_summary']['success_rate']:.2%}  \n")
+        file.write(f"- **Average Metrics:**  \n")
+        file.write(f"  - BLEU: {report['modified_questions_summary']['average_metrics']['bleu']:.4f}  \n")
+        file.write(f"  - ROUGE-1 F1: {report['modified_questions_summary']['average_metrics']['rouge-1-f1']:.4f}  \n")
+        file.write(f"  - METEOR: {report['modified_questions_summary']['average_metrics']['meteor']:.4f}  \n")
