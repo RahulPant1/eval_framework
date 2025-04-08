@@ -34,7 +34,14 @@ class VectorStore:
             
         # Extract configuration
         connection_details = vector_store_config.get('connection_details', {})
-        persist_directory = connection_details.get('persist_directory', './chroma_db')
+        persist_directory = connection_details.get('persist_directory')
+        if not persist_directory:
+            persist_directory = './chroma_db'  # Default directory if not specified
+            # Update MongoDB with default directory
+            db.vector_store.update_one(
+                {"_id": vector_store_config["_id"]},
+                {"$set": {"connection_details.persist_directory": persist_directory}}
+            )
         model_name = connection_details.get('embedding_model', 'all-MiniLM-L6-v2')
         
         # Initialize embedding model
