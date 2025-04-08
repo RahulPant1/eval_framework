@@ -36,25 +36,29 @@ export GEMINI_API_KEY="your_api_key_here"
 
 - `database.py`: MongoDB operations
 - `evaluation.py`: Evaluation metrics and harnesses
+- `init_database.py`: One-time database initialization script
 - `llm_handlers.py`: LLM interaction classes
 - `utils.py`: Utility functions
 - `vector_store.py`: Vector embedding storage using ChromaDB
 - `main.py`: Entry point for running the framework
 - `__init__.py`: Marks the directory as a Python package
-- `run_evaluation.sh`: Shell script to automate running the evaluation
+- `z_run_evaluation.sh`: Shell script to automate running the evaluation
 
-- `test_chromadb.py`: Contains tests for ChromaDB vector store functionality
-- `test_gemini_api.py`: Contains tests for Gemini LLM API interactions
-- `update_gemini_model.py`: Utility script for Gemini model configurations (if applicable)
-- `manage_chroma.py`: Utility script to delete ChromaDB collections
-- `manage_mongodb.py`: Utility script to delete MongoDB collections/databases
+- `z_test_chromadb.py`: Contains tests for ChromaDB vector store functionality
+- `z_test_gemini_api.py`: Contains tests for Gemini LLM API interactions
+- `z_manage_mongodb.py`: Utility script to delete MongoDB collections/databases
 
 ## Usage
 
 ### Basic Usage
 
-1. Prepare a CSV file with document chunks (must have a 'chunk_content' column)
-2. Run the evaluation framework:
+1. Initialize the database (one-time setup):
+```bash
+python init_database.py
+```
+
+2. Prepare a CSV file with document chunks (must have a 'chunk_content' column)
+3. Run the evaluation framework:
 
 ```bash
 python main.py --csv your_data.csv --llm "Gemini 1.5 Flash" --questions 3
