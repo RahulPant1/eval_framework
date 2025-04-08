@@ -1,40 +1,48 @@
-
-2025-04-08 00:07:28,608 - INFO - Generated metrics report at: {}
-2025-04-08 00:14:54,263 - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
-2025-04-08 00:14:54,263 - INFO - NumExpr defaulting to 16 threads.
-2025-04-08 00:14:54,404 - INFO - PyTorch version 2.3.1 available.
-2025-04-08 00:14:55,767 - INFO - Setting up database connection...
-2025-04-08 00:14:55,769 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
-2025-04-08 00:14:55,769 - INFO - Checking for existing collections and creating any missing ones...
-2025-04-08 00:14:55,771 - INFO - Collection 'llms' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'llm_endpoints' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'model_deployments' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'datasets' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'prompt_templates' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'synthetic_data' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'evaluation_harnesses' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'test_suites' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'evaluation_runs' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'test_results' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'metrics' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'metrics_definitions' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Collection 'vector_store' already exists and will be reused.
-2025-04-08 00:14:55,771 - INFO - Initializing data in collections if needed...
-2025-04-08 00:14:55,772 - INFO - LLMs collection already has data, skipping insertion.
-2025-04-08 00:14:55,772 - INFO - LLM endpoints collection already has data, skipping insertion.
-2025-04-08 00:14:55,773 - INFO - Model deployments collection already has data, skipping insertion.
-2025-04-08 00:14:55,773 - INFO - Vector store collection already has data, skipping insertion.
-2025-04-08 00:14:55,774 - INFO - Evaluation harnesses collection already has data, skipping insertion.
-2025-04-08 00:14:55,774 - INFO - Test suites collection already has data, skipping insertion.
-2025-04-08 00:14:55,774 - INFO - Loading data from /home/rahul/eval_framework/sample_data.csv...
-2025-04-08 00:14:55,776 - INFO - Loaded 3 chunks from CSV file: /home/rahul/eval_framework/sample_data.csv
-2025-04-08 00:14:55,776 - INFO - Dataset stored with ID: 67f41d272b9c1a4e0ae5eeb6
-2025-04-08 00:14:55,776 - INFO - Generating synthetic QA pairs using Gemini 1.5 Flash...
-2025-04-08 00:14:55,778 - INFO - Prompt sent to Gemini model: Generate 3 question-answer pairs from the following text. Format each pair as 'Question: <question>
+2025-04-08 20:17:12,618 - INFO - Setting up database connection...
+2025-04-08 20:17:12,620 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:17:12,620 - INFO - Creating collections...
+2025-04-08 20:17:12,622 - INFO - Collection 'llms' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'llm_endpoints' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'model_deployments' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'datasets' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'prompt_templates' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'synthetic_data' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'evaluation_harnesses' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'test_suites' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'evaluation_runs' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'test_results' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'metrics' already exists and will be reused.
+2025-04-08 20:17:12,622 - INFO - Collection 'metrics_definitions' already exists and will be reused.
+2025-04-08 20:17:12,623 - INFO - Collection 'vector_store' already exists and will be reused.
+2025-04-08 20:17:12,623 - INFO - Inserting initial data...
+2025-04-08 20:17:12,623 - INFO - LLMs collection already has data, skipping insertion.
+2025-04-08 20:17:12,623 - INFO - LLM endpoints collection already has data, skipping insertion.
+2025-04-08 20:17:12,624 - INFO - Model deployments collection already has data, skipping insertion.
+2025-04-08 20:17:12,624 - INFO - Vector store collection already has data, skipping insertion.
+2025-04-08 20:17:12,624 - INFO - Evaluation harnesses collection already has data, skipping insertion.
+2025-04-08 20:17:12,625 - INFO - Test suites collection already has data, skipping insertion.
+2025-04-08 20:17:12,625 - INFO - Database initialization completed successfully!
+2025-04-08 20:17:27,042 - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2025-04-08 20:17:27,042 - INFO - NumExpr defaulting to 16 threads.
+2025-04-08 20:17:27,267 - INFO - PyTorch version 2.3.1 available.
+2025-04-08 20:17:29,444 - INFO - Setting up database connection...
+2025-04-08 20:17:29,445 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:17:29,445 - INFO - Loading data from sample_data.csv...
+2025-04-08 20:17:29,450 - INFO - Loaded 3 chunks from CSV file: sample_data.csv
+2025-04-08 20:17:29,451 - INFO - Dataset stored with ID: 67f53701e7145902639f90ba
+2025-04-08 20:17:29,451 - INFO - Adding chunks to vector store...
+2025-04-08 20:17:29,452 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:17:29,454 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:17:29,454 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:17:33,285 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-08 20:17:33,362 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:17:33,938 - INFO - Chunks successfully added to vector store
+2025-04-08 20:17:33,938 - INFO - Generating synthetic QA pairs using Gemini 1.5 Flash...
+2025-04-08 20:17:33,940 - INFO - Prompt sent to Gemini model: Generate 2 question-answer pairs from the following text. Format each pair as 'Question: <question>
 Answer: <answer>'
 
 Text: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
-2025-04-08 00:14:58,445 - INFO - Received response from Gemini model: response:
+2025-04-08 20:17:36,377 - INFO - Received response from Gemini model: response:
 GenerateContentResponse(
     done=True,
     iterator=None,
@@ -44,38 +52,35 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "Question: What is the Retrieval-Augmented Generation (RAG) approach?\nAnswer: RAG combines retrieval-based and generation-based methods for natural language processing, using a retrieval component to fetch relevant information from a knowledge base, which a generative model then uses to create responses.\n\nQuestion: What problem does RAG address in large language models?\nAnswer: RAG addresses the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.\n\nQuestion:  What are the two main components of the RAG approach?\nAnswer: The two main components are a retrieval component (which fetches relevant documents) and a generative model (which uses the retrieved information to create a response).\n"
+                "text": "Question: What is the Retrieval-Augmented Generation (RAG) approach in natural language processing?\nAnswer: RAG combines retrieval-based and generation-based methods.  It uses a retrieval component to fetch relevant information from a knowledge base, which a generative model then uses to create more accurate and informative responses.\n\nQuestion: How does RAG address the limitations of large language models?\nAnswer: RAG addresses these limitations by grounding the generation of responses in external, up-to-date knowledge sources, rather than relying solely on the model's internal knowledge.\n"
               }
             ],
             "role": "model"
           },
           "finish_reason": "STOP",
-          "avg_logprobs": -0.08011619912253486
+          "avg_logprobs": -0.08010158707610274
         }
       ],
       "usage_metadata": {
         "prompt_token_count": 119,
-        "candidates_token_count": 144,
-        "total_token_count": 263
+        "candidates_token_count": 113,
+        "total_token_count": 232
       },
       "model_version": "gemini-1.5-flash"
     }),
 )
-2025-04-08 00:14:58,445 - INFO - Final extracted text: Question: What is the Retrieval-Augmented Generation (RAG) approach?
-Answer: RAG combines retrieval-based and generation-based methods for natural language processing, using a retrieval component to fetch relevant information from a knowledge base, which a generative model then uses to create responses.
+2025-04-08 20:17:36,377 - INFO - Final extracted text: Question: What is the Retrieval-Augmented Generation (RAG) approach in natural language processing?
+Answer: RAG combines retrieval-based and generation-based methods.  It uses a retrieval component to fetch relevant information from a knowledge base, which a generative model then uses to create more accurate and informative responses.
 
-Question: What problem does RAG address in large language models?
-Answer: RAG addresses the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+Question: How does RAG address the limitations of large language models?
+Answer: RAG addresses these limitations by grounding the generation of responses in external, up-to-date knowledge sources, rather than relying solely on the model's internal knowledge.
 
-Question:  What are the two main components of the RAG approach?
-Answer: The two main components are a retrieval component (which fetches relevant documents) and a generative model (which uses the retrieved information to create a response).
-
-2025-04-08 00:14:58,446 - INFO - Successfully parsed 3 QA pairs.
-2025-04-08 00:14:58,450 - INFO - Prompt sent to Gemini model: Generate 3 question-answer pairs from the following text. Format each pair as 'Question: <question>
+2025-04-08 20:17:36,378 - INFO - Successfully parsed 2 QA pairs.
+2025-04-08 20:17:36,379 - INFO - Prompt sent to Gemini model: Generate 2 question-answer pairs from the following text. Format each pair as 'Question: <question>
 Answer: <answer>'
 
 Text: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
-2025-04-08 00:14:59,700 - INFO - Received response from Gemini model: response:
+2025-04-08 20:17:37,373 - INFO - Received response from Gemini model: response:
 GenerateContentResponse(
     done=True,
     iterator=None,
@@ -85,38 +90,35 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "Question: What type of data do vector databases store and query?\nAnswer: Vector databases store and efficiently query high-dimensional vector embeddings, which represent semantic information about text, images, or other data types in a numerical format.\n\nQuestion: What is the purpose of vector embeddings in a vector database?\nAnswer: Vector embeddings represent the semantic information of data (text, images, etc.) in a numerical format, capturing their meaning and relationships.\n\nQuestion: Name three examples of popular vector databases.\nAnswer: Pinecone, Weaviate, and Milvus are three examples of popular vector databases.\n"
+                "text": "Question: What type of data do vector databases store and query?\nAnswer: Vector databases store and efficiently query high-dimensional vector embeddings, which represent semantic information about text, images, or other data types in a numerical format.\n\nQuestion:  Name some popular examples of vector databases.\nAnswer: Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB.\n"
               }
             ],
             "role": "model"
           },
           "finish_reason": "STOP",
-          "avg_logprobs": -0.0507875380477285
+          "avg_logprobs": -0.026882683789288556
         }
       ],
       "usage_metadata": {
         "prompt_token_count": 119,
-        "candidates_token_count": 123,
-        "total_token_count": 242
+        "candidates_token_count": 81,
+        "total_token_count": 200
       },
       "model_version": "gemini-1.5-flash"
     }),
 )
-2025-04-08 00:14:59,700 - INFO - Final extracted text: Question: What type of data do vector databases store and query?
+2025-04-08 20:17:37,374 - INFO - Final extracted text: Question: What type of data do vector databases store and query?
 Answer: Vector databases store and efficiently query high-dimensional vector embeddings, which represent semantic information about text, images, or other data types in a numerical format.
 
-Question: What is the purpose of vector embeddings in a vector database?
-Answer: Vector embeddings represent the semantic information of data (text, images, etc.) in a numerical format, capturing their meaning and relationships.
+Question:  Name some popular examples of vector databases.
+Answer: Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB.
 
-Question: Name three examples of popular vector databases.
-Answer: Pinecone, Weaviate, and Milvus are three examples of popular vector databases.
-
-2025-04-08 00:14:59,700 - INFO - Successfully parsed 3 QA pairs.
-2025-04-08 00:14:59,702 - INFO - Prompt sent to Gemini model: Generate 3 question-answer pairs from the following text. Format each pair as 'Question: <question>
+2025-04-08 20:17:37,374 - INFO - Successfully parsed 2 QA pairs.
+2025-04-08 20:17:37,375 - INFO - Prompt sent to Gemini model: Generate 2 question-answer pairs from the following text. Format each pair as 'Question: <question>
 Answer: <answer>'
 
 Text: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query.
-2025-04-08 00:15:00,890 - INFO - Received response from Gemini model: response:
+2025-04-08 20:17:38,928 - INFO - Received response from Gemini model: response:
 GenerateContentResponse(
     done=True,
     iterator=None,
@@ -126,589 +128,43 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "Question: What are the two main categories of evaluation metrics for Retrieval Augmented Generation (RAG) systems?\nAnswer: Retrieval-focused metrics and generation-focused metrics.\n\nQuestion: Give examples of metrics used to assess the quality of document retrieval in RAG systems.\nAnswer: Precision, recall, and mean reciprocal rank (MRR).\n\nQuestion:  What type of metrics evaluate the quality of the generated text in a RAG system, and provide examples.\nAnswer: Generation-focused metrics, such as BLEU, ROUGE, and METEOR, evaluate the quality of the generated text.\n"
+                "text": "Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?\nAnswer: RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) and generation-focused metrics (e.g., BLEU, ROUGE, METEOR), as well as RAG-specific metrics like faithfulness and relevance.\n\nQuestion:  How do retrieval-focused metrics differ from generation-focused metrics in evaluating RAG systems?\nAnswer: Retrieval-focused metrics assess the quality of the retrieved documents (e.g., how relevant they are), while generation-focused metrics evaluate the quality of the generated text itself by comparing it to reference answers.\n"
               }
             ],
             "role": "model"
           },
           "finish_reason": "STOP",
-          "avg_logprobs": -0.05585030714670817
+          "avg_logprobs": -0.03445120338055727
         }
       ],
       "usage_metadata": {
         "prompt_token_count": 126,
-        "candidates_token_count": 120,
-        "total_token_count": 246
+        "candidates_token_count": 139,
+        "total_token_count": 265
       },
       "model_version": "gemini-1.5-flash"
     }),
 )
-2025-04-08 00:15:00,890 - INFO - Final extracted text: Question: What are the two main categories of evaluation metrics for Retrieval Augmented Generation (RAG) systems?
-Answer: Retrieval-focused metrics and generation-focused metrics.
+2025-04-08 20:17:38,928 - INFO - Final extracted text: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
+Answer: RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) and generation-focused metrics (e.g., BLEU, ROUGE, METEOR), as well as RAG-specific metrics like faithfulness and relevance.
 
-Question: Give examples of metrics used to assess the quality of document retrieval in RAG systems.
-Answer: Precision, recall, and mean reciprocal rank (MRR).
+Question:  How do retrieval-focused metrics differ from generation-focused metrics in evaluating RAG systems?
+Answer: Retrieval-focused metrics assess the quality of the retrieved documents (e.g., how relevant they are), while generation-focused metrics evaluate the quality of the generated text itself by comparing it to reference answers.
 
-Question:  What type of metrics evaluate the quality of the generated text in a RAG system, and provide examples.
-Answer: Generation-focused metrics, such as BLEU, ROUGE, and METEOR, evaluate the quality of the generated text.
-
-2025-04-08 00:15:00,890 - INFO - Successfully parsed 3 QA pairs.
-2025-04-08 00:15:00,893 - INFO - Generated 9 QA pairs
-2025-04-08 00:15:00,893 - INFO - Creating test suite...
-2025-04-08 00:15:00,893 - INFO - Test suite created with ID: 67f41d2c2b9c1a4e0ae5eec0
-2025-04-08 00:15:00,893 - INFO - Running evaluation with Gemini 1.5 Flash...
-2025-04-08 00:15:00,895 - INFO - Use pytorch device_name: cuda
-2025-04-08 00:15:00,895 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2025-04-08 00:15:04,207 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-04-08 00:15:04,264 - INFO - Successfully retrieved existing eval_docs collection.
-2025-04-08 00:15:04,669 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,669 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,670 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,671 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,672 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,673 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,674 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,675 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,676 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,677 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,678 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,679 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,680 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,681 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,682 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,683 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,684 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,685 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,686 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,687 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,688 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,689 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,690 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,691 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,692 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,693 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,694 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,695 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,696 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,696 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,696 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:04,696 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:04,696 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:04,697 - WARNING - Insert of existing embedding ID: 0
-2025-04-08 00:15:04,697 - WARNING - Insert of existing embedding ID: 1
-2025-04-08 00:15:04,697 - WARNING - Insert of existing embedding ID: 2
-2025-04-08 00:15:04,721 - INFO - Calling generate_answers method
-2025-04-08 00:15:04,721 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What is the Retrieval-Augmented Generation (RAG) approach?
+2025-04-08 20:17:38,928 - INFO - Successfully parsed 2 QA pairs.
+2025-04-08 20:17:38,930 - INFO - Generated 6 QA pairs
+2025-04-08 20:17:38,931 - INFO - Creating test suite...
+2025-04-08 20:17:38,931 - INFO - Test suite created with ID: 67f5370ae7145902639f90c2
+2025-04-08 20:17:38,932 - INFO - Running evaluation with Gemini 1.5 Flash...
+2025-04-08 20:17:38,935 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:17:38,941 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:17:38,941 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:17:41,682 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:17:41,714 - INFO - Calling generate_answers method
+2025-04-08 20:17:41,714 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What is the Retrieval-Augmented Generation (RAG) approach in natural language processing?
 
 Context: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
-2025-04-08 00:15:05,860 - INFO - Received response from Gemini model: response:
+2025-04-08 20:17:44,051 - INFO - Received response from Gemini model: response:
 GenerateContentResponse(
     done=True,
     iterator=None,
@@ -718,37 +174,32 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "The Retrieval-Augmented Generation (RAG) approach combines retrieval-based and generation-based methods.  It works by first using a retrieval component to find relevant documents or passages from a knowledge base.  Then, a generative model uses this retrieved information to create more accurate and informative responses.  This addresses limitations of large language models by grounding their outputs in external, up-to-date knowledge.\n"
+                "text": "Retrieval-Augmented Generation (RAG) is a natural language processing approach that combines retrieval-based and generation-based methods.  It works by first using a retrieval component to find relevant documents or passages from a knowledge base.  Then, a generative model uses this retrieved information to create more accurate and informative responses.  This addresses limitations of large language models by grounding their output in external, current knowledge sources.\n"
               }
             ],
             "role": "model"
           },
           "finish_reason": "STOP",
-          "avg_logprobs": -0.045849599955994406
+          "avg_logprobs": -0.07021693149244929
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 298,
-        "candidates_token_count": 81,
-        "total_token_count": 379
+        "prompt_token_count": 302,
+        "candidates_token_count": 83,
+        "total_token_count": 385
       },
       "model_version": "gemini-1.5-flash"
     }),
 )
-2025-04-08 00:15:07,502 - INFO - Use pytorch device_name: cuda
-2025-04-08 00:15:07,502 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2025-04-08 00:15:10,407 - INFO - Successfully retrieved existing eval_docs collection.
-2025-04-08 00:15:10,413 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:10,413 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:10,413 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:10,413 - WARNING - Insert of existing embedding ID: 0
-2025-04-08 00:15:10,413 - WARNING - Insert of existing embedding ID: 1
-2025-04-08 00:15:10,414 - WARNING - Insert of existing embedding ID: 2
-2025-04-08 00:15:10,433 - INFO - Calling generate_answers method
-2025-04-08 00:15:10,433 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What problem does RAG address in large language models?
+2025-04-08 20:17:45,680 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:17:45,683 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:17:45,683 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:17:48,369 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:17:48,399 - INFO - Calling generate_answers method
+2025-04-08 20:17:48,399 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: How does RAG address the limitations of large language models?
 
 Context: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
-2025-04-08 00:15:12,441 - INFO - Received response from Gemini model: response:
+2025-04-08 20:17:50,735 - INFO - Received response from Gemini model: response:
 GenerateContentResponse(
     done=True,
     iterator=None,
@@ -758,77 +209,32 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "RAG addresses the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.  This means it tackles the problem of large language models lacking access to and relying solely on their internal training data, which can be outdated or incomplete.\n"
+                "text": "RAG addresses the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.  This contrasts with LLMs which may hallucinate or produce inaccurate information due to limitations in their training data.  By retrieving relevant information from a knowledge base, RAG ensures the LLM's responses are more accurate and informative.\n"
               }
             ],
             "role": "model"
           },
           "finish_reason": "STOP",
-          "avg_logprobs": -0.181999577416314
-        }
-      ],
-      "usage_metadata": {
-        "prompt_token_count": 295,
-        "candidates_token_count": 54,
-        "total_token_count": 349
-      },
-      "model_version": "gemini-1.5-flash"
-    }),
-)
-2025-04-08 00:15:12,450 - INFO - Use pytorch device_name: cuda
-2025-04-08 00:15:12,450 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2025-04-08 00:15:16,063 - INFO - Successfully retrieved existing eval_docs collection.
-2025-04-08 00:15:16,097 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:16,097 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:16,097 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:16,098 - WARNING - Insert of existing embedding ID: 0
-2025-04-08 00:15:16,098 - WARNING - Insert of existing embedding ID: 1
-2025-04-08 00:15:16,098 - WARNING - Insert of existing embedding ID: 2
-2025-04-08 00:15:16,129 - INFO - Calling generate_answers method
-2025-04-08 00:15:16,129 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are the two main components of the RAG approach?
-
-Context: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
-2025-04-08 00:15:18,136 - INFO - Received response from Gemini model: response:
-GenerateContentResponse(
-    done=True,
-    iterator=None,
-    result=protos.GenerateContentResponse({
-      "candidates": [
-        {
-          "content": {
-            "parts": [
-              {
-                "text": "Based on the provided text, the two main components of the RAG approach are:\n\n1. A **retrieval component** which fetches relevant documents or passages from a knowledge base.\n2. A **generative model** which uses the retrieved information to produce the final response.\n"
-              }
-            ],
-            "role": "model"
-          },
-          "finish_reason": "STOP",
-          "avg_logprobs": -0.09653807508534398
+          "avg_logprobs": -0.05662721906389509
         }
       ],
       "usage_metadata": {
         "prompt_token_count": 296,
-        "candidates_token_count": 58,
-        "total_token_count": 354
+        "candidates_token_count": 70,
+        "total_token_count": 366
       },
       "model_version": "gemini-1.5-flash"
     }),
 )
-2025-04-08 00:15:18,143 - INFO - Use pytorch device_name: cuda
-2025-04-08 00:15:18,144 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2025-04-08 00:15:21,245 - INFO - Successfully retrieved existing eval_docs collection.
-2025-04-08 00:15:21,274 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:21,274 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:21,274 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:21,274 - WARNING - Insert of existing embedding ID: 0
-2025-04-08 00:15:21,274 - WARNING - Insert of existing embedding ID: 1
-2025-04-08 00:15:21,274 - WARNING - Insert of existing embedding ID: 2
-2025-04-08 00:15:21,296 - INFO - Calling generate_answers method
-2025-04-08 00:15:21,296 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What type of data do vector databases store and query?
+2025-04-08 20:17:50,742 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:17:50,745 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:17:50,745 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:17:53,290 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:17:53,305 - INFO - Calling generate_answers method
+2025-04-08 20:17:53,305 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What type of data do vector databases store and query?
 
 Context: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
-2025-04-08 00:15:23,232 - INFO - Received response from Gemini model: response:
+2025-04-08 20:17:55,238 - INFO - Received response from Gemini model: response:
 GenerateContentResponse(
     done=True,
     iterator=None,
@@ -838,77 +244,32 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "Based on the provided text, vector databases store and query **high-dimensional vector embeddings**.  These embeddings represent semantic information about various data types (text, images, etc.) in a numerical format.\n"
+                "text": "Based on the provided text, vector databases store and query **high-dimensional vector embeddings**.  These embeddings represent semantic information about data such as text and images in a numerical format.\n"
               }
             ],
             "role": "model"
           },
           "finish_reason": "STOP",
-          "avg_logprobs": -0.08509073024842798
+          "avg_logprobs": -0.11907760517017262
         }
       ],
       "usage_metadata": {
         "prompt_token_count": 296,
-        "candidates_token_count": 41,
-        "total_token_count": 337
+        "candidates_token_count": 37,
+        "total_token_count": 333
       },
       "model_version": "gemini-1.5-flash"
     }),
 )
-2025-04-08 00:15:23,241 - INFO - Use pytorch device_name: cuda
-2025-04-08 00:15:23,241 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2025-04-08 00:15:26,102 - INFO - Successfully retrieved existing eval_docs collection.
-2025-04-08 00:15:26,151 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:26,152 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:26,152 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:26,152 - WARNING - Insert of existing embedding ID: 0
-2025-04-08 00:15:26,152 - WARNING - Insert of existing embedding ID: 1
-2025-04-08 00:15:26,152 - WARNING - Insert of existing embedding ID: 2
-2025-04-08 00:15:26,186 - INFO - Calling generate_answers method
-2025-04-08 00:15:26,186 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What is the purpose of vector embeddings in a vector database?
-
-Context: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query.
-2025-04-08 00:15:28,454 - INFO - Received response from Gemini model: response:
-GenerateContentResponse(
-    done=True,
-    iterator=None,
-    result=protos.GenerateContentResponse({
-      "candidates": [
-        {
-          "content": {
-            "parts": [
-              {
-                "text": "Based on the provided text, the purpose of vector embeddings in a vector database is to represent semantic information about text, images, or other data types in a numerical format.  This numerical format captures the meaning and relationships between the data points, enabling efficient similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.\n"
-              }
-            ],
-            "role": "model"
-          },
-          "finish_reason": "STOP",
-          "avg_logprobs": -0.08392527941110972
-        }
-      ],
-      "usage_metadata": {
-        "prompt_token_count": 297,
-        "candidates_token_count": 74,
-        "total_token_count": 371
-      },
-      "model_version": "gemini-1.5-flash"
-    }),
-)
-2025-04-08 00:15:28,461 - INFO - Use pytorch device_name: cuda
-2025-04-08 00:15:28,461 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2025-04-08 00:15:31,222 - INFO - Successfully retrieved existing eval_docs collection.
-2025-04-08 00:15:31,236 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:31,236 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:31,236 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:31,237 - WARNING - Insert of existing embedding ID: 0
-2025-04-08 00:15:31,237 - WARNING - Insert of existing embedding ID: 1
-2025-04-08 00:15:31,237 - WARNING - Insert of existing embedding ID: 2
-2025-04-08 00:15:31,256 - INFO - Calling generate_answers method
-2025-04-08 00:15:31,256 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: Name three examples of popular vector databases.
+2025-04-08 20:17:55,246 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:17:55,251 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:17:55,251 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:17:57,961 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:17:57,969 - INFO - Calling generate_answers method
+2025-04-08 20:17:57,970 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: Name some popular examples of vector databases.
 
 Context: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
-2025-04-08 00:15:33,093 - INFO - Received response from Gemini model: response:
+2025-04-08 20:17:59,865 - INFO - Received response from Gemini model: response:
 GenerateContentResponse(
     done=True,
     iterator=None,
@@ -918,37 +279,32 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "Based on the provided text, three examples of popular vector databases are Pinecone, Weaviate, and Milvus.\n"
+                "text": "Based on the provided text, some popular examples of vector databases are Pinecone, Weaviate, Milvus, and ChromaDB.\n"
               }
             ],
             "role": "model"
           },
           "finish_reason": "STOP",
-          "avg_logprobs": -0.001979016065597534
+          "avg_logprobs": -0.027403773932621396
         }
       ],
       "usage_metadata": {
         "prompt_token_count": 293,
-        "candidates_token_count": 25,
-        "total_token_count": 318
+        "candidates_token_count": 29,
+        "total_token_count": 322
       },
       "model_version": "gemini-1.5-flash"
     }),
 )
-2025-04-08 00:15:33,097 - INFO - Use pytorch device_name: cuda
-2025-04-08 00:15:33,098 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2025-04-08 00:15:36,078 - INFO - Successfully retrieved existing eval_docs collection.
-2025-04-08 00:15:36,111 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:36,111 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:36,111 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:36,111 - WARNING - Insert of existing embedding ID: 0
-2025-04-08 00:15:36,111 - WARNING - Insert of existing embedding ID: 1
-2025-04-08 00:15:36,112 - WARNING - Insert of existing embedding ID: 2
-2025-04-08 00:15:36,167 - INFO - Calling generate_answers method
-2025-04-08 00:15:36,167 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are the two main categories of evaluation metrics for Retrieval Augmented Generation (RAG) systems?
+2025-04-08 20:17:59,868 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:17:59,871 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:17:59,871 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:18:02,565 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:18:02,585 - INFO - Calling generate_answers method
+2025-04-08 20:18:02,585 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
 
 Context: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
-2025-04-08 00:15:37,109 - INFO - Received response from Gemini model: response:
+2025-04-08 20:18:03,810 - INFO - Received response from Gemini model: response:
 GenerateContentResponse(
     done=True,
     iterator=None,
@@ -958,86 +314,32 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "The two main categories of evaluation metrics for RAG systems are **retrieval-focused metrics** and **generation-focused metrics**.\n"
+                "text": "Evaluation metrics for RAG systems fall into three categories:\n\n1. **Retrieval-focused metrics:** These assess the quality of the retrieved documents. Examples include precision, recall, and mean reciprocal rank (MRR).\n\n2. **Generation-focused metrics:** These evaluate the quality of the generated text. Examples include BLEU, ROUGE, and METEOR.\n\n3. **RAG-specific metrics:** These measure how well the generated response uses the retrieved information and addresses the original query. Examples include faithfulness and relevance.\n"
               }
             ],
             "role": "model"
           },
           "finish_reason": "STOP",
-          "avg_logprobs": -0.10948757941906269
-        }
-      ],
-      "usage_metadata": {
-        "prompt_token_count": 303,
-        "candidates_token_count": 26,
-        "total_token_count": 329
-      },
-      "model_version": "gemini-1.5-flash"
-    }),
-)
-2025-04-08 00:15:37,113 - INFO - Use pytorch device_name: cuda
-2025-04-08 00:15:37,113 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2025-04-08 00:15:40,366 - INFO - Successfully retrieved existing eval_docs collection.
-2025-04-08 00:15:40,400 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:40,400 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:40,400 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:40,400 - WARNING - Insert of existing embedding ID: 0
-2025-04-08 00:15:40,401 - WARNING - Insert of existing embedding ID: 1
-2025-04-08 00:15:40,401 - WARNING - Insert of existing embedding ID: 2
-2025-04-08 00:15:40,421 - INFO - Calling generate_answers method
-2025-04-08 00:15:40,421 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: Give examples of metrics used to assess the quality of document retrieval in RAG systems.
-
-Context: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
-2025-04-08 00:15:41,738 - INFO - Received response from Gemini model: response:
-GenerateContentResponse(
-    done=True,
-    iterator=None,
-    result=protos.GenerateContentResponse({
-      "candidates": [
-        {
-          "content": {
-            "parts": [
-              {
-                "text": "Based on the provided text, the metrics used to assess the quality of document retrieval in RAG systems are:\n\n* **Precision:** Measures the proportion of retrieved documents that are relevant.\n* **Recall:** Measures the proportion of relevant documents that were retrieved.\n* **Mean Reciprocal Rank (MRR):**  Measures the average rank of the first relevant document retrieved.\n"
-              }
-            ],
-            "role": "model"
-          },
-          "finish_reason": "STOP",
-          "citation_metadata": {
-            "citation_sources": [
-              {
-                "start_index": 114,
-                "end_index": 255,
-                "uri": "https://webdocs.cs.ualberta.ca/~zaiane/postscript/thesis/HangCui2001.pdf"
-              }
-            ]
-          },
-          "avg_logprobs": -0.049648178251166096
+          "avg_logprobs": -0.050405779339018325
         }
       ],
       "usage_metadata": {
         "prompt_token_count": 301,
-        "candidates_token_count": 76,
-        "total_token_count": 377
+        "candidates_token_count": 105,
+        "total_token_count": 406
       },
       "model_version": "gemini-1.5-flash"
     }),
 )
-2025-04-08 00:15:41,743 - INFO - Use pytorch device_name: cuda
-2025-04-08 00:15:41,744 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2025-04-08 00:15:44,891 - INFO - Successfully retrieved existing eval_docs collection.
-2025-04-08 00:15:44,928 - WARNING - Add of existing embedding ID: 0
-2025-04-08 00:15:44,928 - WARNING - Add of existing embedding ID: 1
-2025-04-08 00:15:44,928 - WARNING - Add of existing embedding ID: 2
-2025-04-08 00:15:44,929 - WARNING - Insert of existing embedding ID: 0
-2025-04-08 00:15:44,929 - WARNING - Insert of existing embedding ID: 1
-2025-04-08 00:15:44,929 - WARNING - Insert of existing embedding ID: 2
-2025-04-08 00:15:44,983 - INFO - Calling generate_answers method
-2025-04-08 00:15:44,983 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What type of metrics evaluate the quality of the generated text in a RAG system, and provide examples.
+2025-04-08 20:18:03,823 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:18:03,826 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:18:03,826 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:18:06,442 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:18:06,458 - INFO - Calling generate_answers method
+2025-04-08 20:18:06,458 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: How do retrieval-focused metrics differ from generation-focused metrics in evaluating RAG systems?
 
 Context: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
-2025-04-08 00:15:47,327 - INFO - Received response from Gemini model: response:
+2025-04-08 20:18:09,561 - INFO - Received response from Gemini model: response:
 GenerateContentResponse(
     done=True,
     iterator=None,
@@ -1047,23 +349,539 @@ GenerateContentResponse(
           "content": {
             "parts": [
               {
-                "text": "Generation-focused metrics evaluate the quality of the generated text in a RAG system.  Examples include:\n\n* **BLEU:**  Compares the generated text to one or more reference answers by measuring the overlap of n-grams.\n* **ROUGE:**  Similar to BLEU, but uses different metrics (recall-oriented) to evaluate the overlap of n-grams and longer sequences.\n* **METEOR:**  Another metric that compares the generated text to reference answers, considering synonyms and paraphrases.\n"
+                "text": "Retrieval-focused metrics (like precision, recall, and MRR) evaluate the *effectiveness of the retrieval component* in finding relevant documents from the knowledge base.  Generation-focused metrics (like BLEU, ROUGE, and METEOR), on the other hand, assess the *quality of the text generated* by the model, comparing it to a reference answer.  In short, retrieval metrics focus on the accuracy of document selection, while generation metrics focus on the quality of the answer synthesized from those documents.\n"
               }
             ],
             "role": "model"
           },
           "finish_reason": "STOP",
-          "avg_logprobs": -0.17720850989932105
+          "avg_logprobs": -0.10254196020273063
         }
       ],
       "usage_metadata": {
-        "prompt_token_count": 305,
-        "candidates_token_count": 105,
-        "total_token_count": 410
+        "prompt_token_count": 302,
+        "candidates_token_count": 104,
+        "total_token_count": 406
       },
       "model_version": "gemini-1.5-flash"
     }),
 )
-2025-04-08 00:15:47,340 - INFO - Evaluation completed with 6 results
-2025-04-08 00:15:47,342 - INFO - Generated metrics reports: reports/rag_evaluation_report_20250408_001547.html
-2025-04-08 00:15:47,342 - INFO - Generated metrics report at: {'html': 'reports/rag_evaluation_report_20250408_001547.html'}
+2025-04-08 20:18:09,579 - INFO - Evaluation completed with 6 results
+2025-04-08 20:18:09,589 - INFO - Generated metrics reports: reports/rag_evaluation_report_20250408_201809.html
+2025-04-08 20:18:09,589 - INFO - Generated metrics report at: {'html': 'reports/rag_evaluation_report_20250408_201809.html'}
+2025-04-08 20:23:48,745 - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2025-04-08 20:23:48,745 - INFO - NumExpr defaulting to 16 threads.
+2025-04-08 20:23:48,874 - INFO - PyTorch version 2.3.1 available.
+2025-04-08 20:23:50,007 - INFO - Setting up database connection...
+2025-04-08 20:23:50,009 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:23:50,009 - INFO - Loading data from sample_data.csv...
+2025-04-08 20:23:50,011 - INFO - Loaded 3 chunks from CSV file: sample_data.csv
+2025-04-08 20:23:50,013 - INFO - Dataset stored with ID: 67f5387e1d8b6c71c4e3b7e3
+2025-04-08 20:23:50,013 - INFO - Adding chunks to vector store...
+2025-04-08 20:23:50,014 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:23:50,017 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:23:50,017 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:23:53,121 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-08 20:23:53,174 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:23:53,542 - WARNING - Insert of existing embedding ID: 0
+2025-04-08 20:23:53,542 - WARNING - Insert of existing embedding ID: 1
+2025-04-08 20:23:53,543 - WARNING - Insert of existing embedding ID: 2
+2025-04-08 20:23:53,543 - WARNING - Add of existing embedding ID: 0
+2025-04-08 20:23:53,543 - WARNING - Add of existing embedding ID: 1
+2025-04-08 20:23:53,543 - WARNING - Add of existing embedding ID: 2
+2025-04-08 20:23:53,547 - INFO - Chunks successfully added to vector store
+2025-04-08 20:23:53,547 - INFO - Generating synthetic QA pairs using Gemini 1.5 Flash...
+2025-04-08 20:23:53,549 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-08 20:23:55,706 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?\nAnswer: RAG enhances large language models by grounding their responses in external, up-to-date knowledge sources retrieved from a knowledge base, leading to more accurate and informative outputs, unlike models that solely rely on their internal training data.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.14858892689580502
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 69,
+        "total_token_count": 188
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:23:55,707 - INFO - Final extracted text: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+Answer: RAG enhances large language models by grounding their responses in external, up-to-date knowledge sources retrieved from a knowledge base, leading to more accurate and informative outputs, unlike models that solely rely on their internal training data.
+
+2025-04-08 20:23:55,708 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 20:23:55,710 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 20:23:56,611 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What are vector databases and what types of data do they handle?\nAnswer: Vector databases are specialized database systems designed to efficiently store and query high-dimensional vector embeddings representing semantic information from text, images, or other data types.  They capture the meaning and relationships of this data in a numerical format.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.12198539078235626
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 64,
+        "total_token_count": 183
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:23:56,611 - INFO - Final extracted text: Question: What are vector databases and what types of data do they handle?
+Answer: Vector databases are specialized database systems designed to efficiently store and query high-dimensional vector embeddings representing semantic information from text, images, or other data types.  They capture the meaning and relationships of this data in a numerical format.
+
+2025-04-08 20:23:56,611 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 20:23:56,613 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query.
+2025-04-08 20:23:58,006 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems, and what aspects of the system do they assess?\nAnswer: RAG systems are evaluated using retrieval-focused metrics (precision, recall, MRR) which assess the relevance of retrieved documents, and generation-focused metrics (BLEU, ROUGE, METEOR) which evaluate the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance measure how well the generated response uses the retrieved information and answers the query.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.03615522384643555
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 126,
+        "candidates_token_count": 107,
+        "total_token_count": 233
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:23:58,006 - INFO - Final extracted text: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems, and what aspects of the system do they assess?
+Answer: RAG systems are evaluated using retrieval-focused metrics (precision, recall, MRR) which assess the relevance of retrieved documents, and generation-focused metrics (BLEU, ROUGE, METEOR) which evaluate the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance measure how well the generated response uses the retrieved information and answers the query.
+
+2025-04-08 20:23:58,006 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 20:23:58,009 - INFO - Generated 3 QA pairs
+2025-04-08 20:23:58,009 - INFO - Creating test suite...
+2025-04-08 20:23:58,009 - INFO - Test suite created with ID: 67f538861d8b6c71c4e3b7e8
+2025-04-08 20:23:58,009 - INFO - Running evaluation with Gemini 1.5 Flash...
+2025-04-08 20:23:58,013 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:23:58,016 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:23:58,016 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:24:00,835 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:24:00,854 - INFO - Calling generate_answers method
+2025-04-08 20:24:00,854 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+
+Context: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 20:24:03,245 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the model's internal knowledge (which may be outdated or incomplete), RAG first retrieves relevant information from a knowledge base, allowing the generative model to produce more accurate and informative responses.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.04099128062908466
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 304,
+        "candidates_token_count": 65,
+        "total_token_count": 369
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:24:04,807 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:24:04,809 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:24:04,809 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:24:08,404 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:24:08,420 - INFO - Calling generate_answers method
+2025-04-08 20:24:08,421 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are vector databases and what types of data do they handle?
+
+Context: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-08 20:24:11,256 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided text, vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings.  These embeddings are numerical representations of semantic information from data like text and images, capturing their meaning and relationships.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.05684045086736265
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 298,
+        "candidates_token_count": 46,
+        "total_token_count": 344
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:24:11,267 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:24:11,270 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:24:11,270 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:24:13,933 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:24:13,950 - INFO - Calling generate_answers method
+2025-04-08 20:24:13,951 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems, and what aspects of the system do they assess?
+
+Context: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 20:24:17,286 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Evaluation metrics for RAG systems are categorized into retrieval-focused and generation-focused metrics, plus RAG-specific metrics.\n\n* **Retrieval-focused metrics:**  These assess the effectiveness of the retrieval component.  Examples include precision, recall, and mean reciprocal rank (MRR), measuring how well the system finds relevant documents.\n\n* **Generation-focused metrics:** These assess the quality of the generated text. Examples include BLEU, ROUGE, and METEOR, comparing the generated text to reference answers.\n\n* **RAG-specific metrics:** These evaluate the integration of retrieval and generation.  Faithfulness and relevance are mentioned as examples, measuring how well the generated response uses the retrieved information and answers the original query.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.12447429029908899
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 311,
+        "candidates_token_count": 146,
+        "total_token_count": 457
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:24:17,303 - INFO - Evaluation completed with 6 results
+2025-04-08 20:24:17,305 - INFO - Generated metrics reports: reports/rag_evaluation_report_20250408_202417.html
+2025-04-08 20:24:17,305 - INFO - Generated metrics report at: {'html': 'reports/rag_evaluation_report_20250408_202417.html'}
+2025-04-08 20:49:10,740 - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2025-04-08 20:49:10,740 - INFO - NumExpr defaulting to 16 threads.
+2025-04-08 20:49:10,949 - INFO - PyTorch version 2.3.1 available.
+2025-04-08 20:49:12,745 - INFO - Setting up database connection...
+2025-04-08 20:49:12,747 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:49:12,747 - INFO - Loading data from sample_data.csv...
+2025-04-08 20:49:12,752 - INFO - Loaded 3 chunks from CSV file: sample_data.csv
+2025-04-08 20:49:12,753 - INFO - Dataset stored with ID: 67f53e702d8df0af2a97e087
+2025-04-08 20:49:12,753 - INFO - Adding chunks to vector store...
+2025-04-08 20:49:12,754 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:49:12,757 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:49:12,757 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:49:16,251 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-08 20:49:16,323 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:49:16,904 - WARNING - Add of existing embedding ID: 0
+2025-04-08 20:49:16,904 - WARNING - Add of existing embedding ID: 1
+2025-04-08 20:49:16,904 - WARNING - Add of existing embedding ID: 2
+2025-04-08 20:49:16,905 - WARNING - Add of existing embedding ID: 0
+2025-04-08 20:49:16,905 - WARNING - Add of existing embedding ID: 1
+2025-04-08 20:49:16,905 - WARNING - Add of existing embedding ID: 2
+2025-04-08 20:49:16,905 - WARNING - Insert of existing embedding ID: 0
+2025-04-08 20:49:16,905 - WARNING - Insert of existing embedding ID: 1
+2025-04-08 20:49:16,906 - WARNING - Insert of existing embedding ID: 2
+2025-04-08 20:49:16,909 - INFO - Chunks successfully added to vector store
+2025-04-08 20:49:16,909 - INFO - Generating synthetic QA pairs using Gemini 1.5 Flash...
+2025-04-08 20:49:16,911 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-08 20:49:19,035 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?\nAnswer: RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thereby addressing limitations and producing more accurate and informative responses.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.05997518013263571
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 58,
+        "total_token_count": 177
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:49:19,035 - INFO - Final extracted text: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+Answer: RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thereby addressing limitations and producing more accurate and informative responses.
+
+2025-04-08 20:49:19,035 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 20:49:19,036 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 20:49:19,831 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What are vector databases and what types of data do they handle?\nAnswer: Vector databases are specialized database systems designed to efficiently store and query high-dimensional vector embeddings representing semantic information from text, images, or other data types.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.1338760317588339
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 49,
+        "total_token_count": 168
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:49:19,832 - INFO - Final extracted text: Question: What are vector databases and what types of data do they handle?
+Answer: Vector databases are specialized database systems designed to efficiently store and query high-dimensional vector embeddings representing semantic information from text, images, or other data types.
+
+2025-04-08 20:49:19,832 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 20:49:19,833 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query.
+2025-04-08 20:49:21,304 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?\nAnswer: RAG systems are evaluated using retrieval-focused metrics (precision, recall, MRR) to assess document retrieval and generation-focused metrics (BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used to measure how well the generated response uses retrieved information and addresses the query.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.06635537398488899
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 126,
+        "candidates_token_count": 95,
+        "total_token_count": 221
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:49:21,304 - INFO - Final extracted text: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
+Answer: RAG systems are evaluated using retrieval-focused metrics (precision, recall, MRR) to assess document retrieval and generation-focused metrics (BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used to measure how well the generated response uses retrieved information and addresses the query.
+
+2025-04-08 20:49:21,304 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 20:49:21,306 - INFO - Generated 3 QA pairs
+2025-04-08 20:49:21,306 - INFO - Creating test suite...
+2025-04-08 20:49:21,306 - INFO - Test suite created with ID: 67f53e792d8df0af2a97e08c
+2025-04-08 20:49:21,306 - INFO - Running evaluation with Gemini 1.5 Flash...
+2025-04-08 20:49:21,320 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:49:21,326 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:49:21,326 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:49:24,809 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:49:24,839 - INFO - Calling generate_answers method
+2025-04-08 20:49:24,839 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+
+Context: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 20:49:26,892 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the model's internal knowledge (which may be outdated or incomplete), RAG first retrieves relevant information from a knowledge base, allowing the generative model to produce more accurate and informative responses.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.04523929816025954
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 304,
+        "candidates_token_count": 65,
+        "total_token_count": 369
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:49:28,506 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:49:28,509 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:49:28,509 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:49:31,804 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:49:31,829 - INFO - Calling generate_answers method
+2025-04-08 20:49:31,829 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are vector databases and what types of data do they handle?
+
+Context: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-08 20:49:33,918 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided text, vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings.  These embeddings represent semantic information about text, images, or other data types in a numerical format.  They handle data that has been converted into vector representations, capturing the meaning and relationships between data points.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0921880765394731
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 298,
+        "candidates_token_count": 66,
+        "total_token_count": 364
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:49:33,926 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:49:33,928 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:49:33,929 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:49:36,815 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:49:36,830 - INFO - Calling generate_answers method
+2025-04-08 20:49:36,830 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
+
+Context: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 20:49:39,102 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Evaluation metrics for RAG systems include:\n\n* **Retrieval-focused metrics:**  precision, recall, and mean reciprocal rank (MRR), assessing the relevance of retrieved documents.\n* **Generation-focused metrics:** BLEU, ROUGE, and METEOR, evaluating the quality of the generated text against reference answers.\n* **RAG-specific metrics:** faithfulness and relevance, measuring how well the generated response uses retrieved information and addresses the query.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.06066813835730919
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 301,
+        "candidates_token_count": 91,
+        "total_token_count": 392
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 20:49:39,117 - INFO - Evaluation completed with 6 results
+2025-04-08 20:49:39,118 - INFO - Generated metrics reports: reports/rag_evaluation_report_20250408_204939.html
+2025-04-08 20:49:39,118 - INFO - Generated metrics report at: {'html': 'reports/rag_evaluation_report_20250408_204939.html'}
+2025-04-08 20:49:42,502 - INFO - Cleaning up ChromaDB collection...
+2025-04-08 20:49:42,504 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:49:42,509 - INFO - Use pytorch device_name: cuda
+2025-04-08 20:49:42,509 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 20:49:46,137 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 20:49:46,139 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:49:46,165 - INFO - Successfully cleaned up eval_docs collection.
+2025-04-08 20:49:46,165 - INFO - ChromaDB cleanup completed.
+2025-04-08 20:50:00,173 - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2025-04-08 20:50:00,173 - INFO - NumExpr defaulting to 16 threads.
+2025-04-08 20:50:00,324 - INFO - PyTorch version 2.3.1 available.
+2025-04-08 20:50:55,141 - INFO - Setting up database connection...
+2025-04-08 20:50:55,142 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 20:50:55,143 - INFO - Creating collections...
+2025-04-08 20:50:55,145 - INFO - Collection 'llms' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'llm_endpoints' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'model_deployments' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'datasets' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'prompt_templates' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'synthetic_data' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'evaluation_harnesses' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'test_suites' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'evaluation_runs' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'test_results' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'metrics' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'metrics_definitions' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Collection 'vector_store' already exists and will be reused.
+2025-04-08 20:50:55,145 - INFO - Inserting initial data...
+2025-04-08 20:50:55,146 - INFO - LLMs collection already has data, skipping insertion.
+2025-04-08 20:50:55,146 - INFO - LLM endpoints collection already has data, skipping insertion.
+2025-04-08 20:50:55,147 - INFO - Model deployments collection already has data, skipping insertion.
+2025-04-08 20:50:55,147 - INFO - Vector store collection already has data, skipping insertion.
+2025-04-08 20:50:55,147 - INFO - Evaluation harnesses collection already has data, skipping insertion.
+2025-04-08 20:50:55,148 - INFO - Test suites collection already has data, skipping insertion.
+2025-04-08 20:50:55,148 - INFO - Database initialization completed successfully!

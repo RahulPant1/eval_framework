@@ -2,3 +2,15 @@ __pycache__/evaluation.cpython-311.pyc
 __pycache__/llm_handlers.cpython-311.pyc
 __pycache__/report_generator.cpython-311.pyc
 chroma_dev/chroma.sqlite3
+__pycache__/database.cpython-311.pyc
+__pycache__/evaluation.cpython-311.pyc
+__pycache__/llm_handlers.cpython-311.pyc
+__pycache__/report_generator.cpython-311.pyc
+__pycache__/utils.cpython-311.pyc
+__pycache__/vector_store.cpython-311.pyc
+chroma_db/chroma.sqlite3
+reports/rag_evaluation_report_20250408_003019.html
+reports/rag_evaluation_report_20250408_144611.html
+reports/rag_evaluation_report_20250408_154527.html
+reports/rag_evaluation_report_20250408_194024.html
+reports/rag_evaluation_report_20250408_194520.html

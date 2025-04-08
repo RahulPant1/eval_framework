@@ -1,11 +1,30 @@
 # RAG Evaluation Framework: Execution Flow Documentation
 
-## Prerequsistes
+## Prerequisites
 - Python 3.8+
 - MongoDB Running on localhost (sudo systemctl start mongod)
-- Gemini API key (export GEMINI_API_KEY="")
+- Gemini API key (export GEMINI_API_KEY="") for Gemini 1.5 Flash model
+- Disk space for persistent ChromaDB storage
 
 ## Execution Flow
+
+Step 1: Initialize the databse: python init_database.py
+
+Step 2: Given Below:
+### Help
+python3 main.py --h
+usage: main.py [-h] [--csv CSV] [--llm LLM] [--questions QUESTIONS] [--no-cleanup-prompt]
+
+RAG Evaluation Framework
+
+options:
+  -h, --help            show this help message and exit
+  --csv CSV             Path to CSV file with document chunks
+  --llm LLM             LLM to use
+  --questions QUESTIONS
+                        Number of questions per chunk
+  --no-cleanup-prompt   Skip cleanup prompt after execution
+
 
 This document explains the execution flow when running the command:
 ```bash
@@ -16,10 +35,12 @@ python3 main.py --csv /home/rahul/eval_framework/sample_data.csv
 
 The RAG Evaluation Framework is designed to evaluate Retrieval-Augmented Generation systems by:
 1. Loading document chunks from a CSV file
-2. Generating synthetic question-answer pairs using an LLM
-3. Creating a test suite from these pairs
-4. Running evaluations using a RAG pipeline
-5. Calculating performance metrics
+2. Adding document chunks to a persistent ChromaDB vector store
+3. Generating synthetic question-answer pairs using an LLM
+4. Creating a test suite from these pairs
+5. Running evaluations using a RAG pipeline
+6. Calculating performance metrics
+7. Generating comprehensive evaluation reports
 
 ## Execution Flow
 
@@ -57,7 +78,7 @@ Collections created include:
 - metrics_definitions
 - vector_store
 
-### 3. Dataset Storage: `store_dataset()`
+### 3. Dataset Storage and Vector Indexing: `store_dataset()`
 
 ```python
 dataset_id = store_dataset(db, csv_path)
@@ -67,6 +88,10 @@ This function:
 - Calls `load_data_from_csv()` from `utils.py` to read document chunks
 - Creates a dataset document with metadata and chunks
 - Inserts the dataset into MongoDB and returns its ID
+- **Initializes the persistent ChromaDB vector store**
+- **Adds all document chunks to the vector store in a single operation**
+
+This optimization ensures that document chunks are indexed only once during initial data loading, rather than repeatedly during each evaluation question.
 
 ### 4. Synthetic Data Generation: `generate_synthetic_data()`
 
@@ -104,13 +129,25 @@ This function:
 - Calls `run_evaluation_harness()` from `evaluation.py`, which:
   - Retrieves the test suite from MongoDB
   - For each test question:
-    - Initializes a `VectorStore` from `vector_store.py`
-    - Adds documents to the vector store
+    - **Reuses the existing vector store** (no need to reinitialize for each question)
     - Calls `generate_rag_response()` which:
       - Retrieves similar documents using vector similarity search
       - Generates an answer using the LLM with the retrieved context
     - Evaluates the response using metrics like BLEU, ROUGE, etc.
     - Stores the results in the test_results collection
+
+### 7. Metrics Reporting: `generate_metrics_report()`
+
+```python
+report_path = generate_metrics_report(db, results["run_id"], output_format="html")
+```
+
+This new function:
+- Retrieves the evaluation run results from MongoDB
+- Calculates aggregate metrics across all test questions
+- Generates detailed reports in multiple formats (HTML, Markdown, etc.)
+- Saves reports to the `reports/` directory with timestamps
+- Returns the path to the generated report
 
 ## Key Components
 
@@ -118,13 +155,14 @@ This function:
 
 The `VectorStore` class:
 - Uses SentenceTransformer to generate embeddings
-- Stores embeddings in ChromaDB
+- **Stores embeddings in persistent ChromaDB** (stored in `./chroma_dev/` directory)
 - Provides similarity search functionality
+- **Implements robust error handling and retries for ChromaDB operations**
 
 ### LLM Handlers (llm_handlers.py)
 
 The framework supports multiple LLMs through handler classes:
-- `GeminiLLMHandler`: Interfaces with Google's Gemini 1.5 Flash model
+- `GeminiLLMHandler`: Interfaces with Google's Gemini 1.5 Flash model (previously Gemini Pro)
 - Each handler implements methods for:
   - Generating QA pairs
   - Generating modified questions
@@ -138,6 +176,15 @@ The framework calculates various metrics:
 - Semantic similarity: Uses embedding-based similarity
 - Custom RAG metrics like faithfulness and relevance
 
+### Report Generator (report_generator.py)
+
+The new report generator module:
+- Calculates aggregate metrics across all test questions
+- Generates detailed per-question metrics
+- Supports multiple output formats (HTML, Markdown, JSON, TXT)
+- Creates visually appealing reports with tables and charts
+- Includes modified question performance analysis
+
 ## Logging
 
 The framework logs detailed information to `rag_evaluation.log`, including:
@@ -148,4 +195,4 @@ The framework logs detailed information to `rag_evaluation.log`, including:
 
 ## Conclusion
 
-The RAG Evaluation Framework provides an end-to-end pipeline for evaluating RAG systems. It handles data loading, synthetic QA generation, vector storage, retrieval, response generation, and evaluation metrics calculation in a modular and extensible way.
+The RAG Evaluation Framework provides an end-to-end pipeline for evaluating RAG systems. It handles data loading, synthetic QA generation, persistent vector storage, retrieval, response generation, evaluation metrics calculation, and comprehensive reporting in a modular and extensible way.

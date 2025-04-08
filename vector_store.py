@@ -13,28 +13,46 @@ import logging
 import chromadb
 from chromadb.config import Settings
 from chromadb.errors import ChromaError
+from database import connect_to_mongodb
 
 class VectorStore:
     """
     Handles vector storage and retrieval for RAG systems.
     """
 
-    def __init__(self, model_name: str = 'all-MiniLM-L6-v2'):
+    def __init__(self):
         """
         Initialize vector store with embedding model and ChromaDB local store.
+        Configuration is fetched from MongoDB vector_store collection.
         """
+        # Get configuration from MongoDB
+        db = connect_to_mongodb()
+        vector_store_config = db.vector_store.find_one()
+        
+        if not vector_store_config:
+            raise RuntimeError("Vector store configuration not found in MongoDB")
+            
+        # Extract configuration
+        connection_details = vector_store_config.get('connection_details', {})
+        persist_directory = connection_details.get('persist_directory', './chroma_db')
+        model_name = connection_details.get('embedding_model', 'all-MiniLM-L6-v2')
+        
+        # Initialize embedding model
         self.model = SentenceTransformer(model_name)
 
-        # Initialize ChromaDB client with new configuration
-        self.client = chromadb.PersistentClient(path="./chroma_dev")
+        # Initialize ChromaDB client with configuration from MongoDB
+        self.client = chromadb.PersistentClient(path=persist_directory)
         self.collection = None # Initialize self.collection to None
+        
+        # Get collection name from MongoDB config
+        collection_name = vector_store_config.get('collection_name', 'eval_docs')
 
         # Atomic collection initialization with retries
         max_retries = 3
         for attempt in range(max_retries):
             try:
-                self.collection = self.client.get_collection("eval_docs")
-                logging.info("Successfully retrieved existing eval_docs collection.")
+                self.collection = self.client.get_collection(collection_name)
+                logging.info(f"Successfully retrieved existing {collection_name} collection.")
                 break # Exit loop if collection is retrieved successfully
             except Exception as e:
                 # Check if the error indicates the collection doesn't exist
@@ -42,20 +60,20 @@ class VectorStore:
                 # We check the specific message content for robustness.
                 error_message = str(e).lower()
                 # Use more specific check for ChromaDB's typical message
-                is_not_found_error = f"collection eval_docs does not exist" in error_message
+                is_not_found_error = f"collection {collection_name} does not exist" in error_message
 
                 if is_not_found_error:
-                    logging.warning(f"Collection 'eval_docs' not found (Error type: {type(e).__name__}, message: {e}). Attempting to create (Attempt {attempt+1}/{max_retries})...")
+                    logging.warning(f"Collection '{collection_name}' not found (Error type: {type(e).__name__}, message: {e}). Attempting to create (Attempt {attempt+1}/{max_retries})...")
                     if attempt == max_retries - 1:
                         logging.error("Failed to create collection after multiple retries.")
                         raise # Re-raise the original error if all creation attempts fail
                     try:
                         self.collection = self.client.create_collection(
-                            "eval_docs",
+                            collection_name,
                             metadata={"hnsw:space": "cosine"},
                             embedding_function=None # Assuming SentenceTransformer handles embeddings separately
                         )
-                        logging.info("Successfully created new eval_docs collection.")
+                        logging.info(f"Successfully created new {collection_name} collection.")
                         break # Exit loop after successful creation
                     except Exception as create_error:
                         logging.warning(f"Collection creation attempt {attempt+1} failed: {create_error}")
@@ -72,7 +90,7 @@ class VectorStore:
 
         # Final check after the loop
         if self.collection is None:
-            raise RuntimeError("Failed to initialize collection 'eval_docs' after all retries.")
+            raise RuntimeError(f"Failed to initialize collection '{collection_name}' after all retries.")
 
     def add_documents(self, documents: List[str]) -> None:
         """
@@ -101,6 +119,10 @@ class VectorStore:
                 n_results=top_k
             )
 
+            if not results['documents'] or not results['documents'][0]:
+                logging.warning(f"No similar documents found for query: {query}")
+                return []
+
             return [
                 {
                     "text": doc,
@@ -110,4 +132,28 @@ class VectorStore:
             ]
         except Exception as e:
             logging.error(f"Error retrieving documents: {e}")
+            return []
+
+    def cleanup_collection(self) -> None:
+        """
+        Delete all documents from the collection by removing and recreating the collection.
+        """
+        try:
+            if self.collection is not None:
+                # Get collection name from MongoDB config
+                db = connect_to_mongodb()
+                vector_store_config = db.vector_store.find_one()
+                collection_name = vector_store_config.get('collection_name', 'eval_docs')
+                
+                # Delete the entire collection
+                self.client.delete_collection(collection_name)
+                # Recreate the collection
+                self.collection = self.client.create_collection(
+                    collection_name,
+                    metadata={"hnsw:space": "cosine"},
+                    embedding_function=None
+                )
+                logging.info(f"Successfully cleaned up {collection_name} collection.")
+        except Exception as e:
+            logging.error(f"Error cleaning up collection: {e}")
             raise

@@ -13,7 +13,7 @@ This script demonstrates how to use the framework to:
 import os
 import logging
 import argparse
-from database import connect_to_mongodb, create_collections, insert_initial_data
+from database import connect_to_mongodb
 from vector_store import VectorStore
 from llm_handlers import get_llm_handler
 from evaluation import run_evaluation_harness, generate_rag_response, generate_metrics_report
@@ -25,17 +25,13 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 def setup_database():
-    """Set up MongoDB database and collections, reusing existing ones if available"""
+    """Set up MongoDB database connection"""
     logger.info("Setting up database connection...")
     db = connect_to_mongodb()
-    logger.info("Checking for existing collections and creating any missing ones...")
-    create_collections(db)
-    logger.info("Initializing data in collections if needed...")
-    insert_initial_data(db)
     return db
 
 def store_dataset(db, csv_file_path):
-    """Store dataset from CSV file"""
+    """Store dataset from CSV file and add to vector store"""
     logger.info(f"Loading data from {csv_file_path}...")
     try:
         # Load chunks from CSV
@@ -54,6 +50,14 @@ def store_dataset(db, csv_file_path):
         
         dataset_id = db.datasets.insert_one(dataset).inserted_id
         logger.info(f"Dataset stored with ID: {dataset_id}")
+        
+        # Add chunks to vector store
+        logger.info("Adding chunks to vector store...")
+        from vector_store import VectorStore
+        vector_store = VectorStore()
+        vector_store.add_documents(chunks)
+        logger.info("Chunks successfully added to vector store")
+        
         return dataset_id
     except Exception as e:
         logger.error(f"Error storing dataset: {e}")
@@ -160,12 +164,21 @@ def run_evaluation(db, test_suite_id, llm_name="Gemini 1.5 Flash"):
         logger.error(f"Error running evaluation: {e}")
         raise
 
+def prompt_cleanup():
+    """Prompt user about cleaning up ChromaDB after execution"""
+    while True:
+        response = input("\nDo you want to clean up the ChromaDB collection? (yes/no): ").lower().strip()
+        if response in ['yes', 'no']:
+            return response == 'yes'
+        print("Please enter 'yes' or 'no'")
+
 def main():
     """Main function to run the RAG evaluation framework"""
     parser = argparse.ArgumentParser(description="RAG Evaluation Framework")
     parser.add_argument("--csv", help="Path to CSV file with document chunks", default="data.csv")
     parser.add_argument("--llm", help="LLM to use", default="Gemini 1.5 Flash")
     parser.add_argument("--questions", type=int, help="Number of questions per chunk", default=3)
+    parser.add_argument('--no-cleanup-prompt', action='store_true', help='Skip cleanup prompt after execution')
     args = parser.parse_args()
     
     # Check for API key
@@ -176,7 +189,7 @@ def main():
         return
     
     try:
-        # Setup database
+        # Setup database connection
         db = setup_database()
         
         # Check if CSV file exists and is valid
@@ -216,6 +229,13 @@ def main():
         print(f"Ran {results['num_tests']} evaluation tests")
         if report_path:
             print(f"Generated metrics report: {report_path}")
+        
+        # Prompt for cleanup if not disabled
+        if not args.no_cleanup_prompt and prompt_cleanup():
+            logger.info("Cleaning up ChromaDB collection...")
+            vector_store = VectorStore()
+            vector_store.cleanup_collection()
+            logger.info("ChromaDB cleanup completed.")
         
     except Exception as e:
         logger.error(f"Error in main: {e}")

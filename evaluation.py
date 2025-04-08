@@ -46,15 +46,15 @@ def generate_rag_response(question: str, db, dataset_id, llm_name: str, num_resu
         if not dataset:
             raise ValueError(f"Dataset with ID {dataset_id} not found")
             
-        # Initialize vector store
+        # Initialize vector store - chunks are already added during dataset loading
         vector_store = VectorStore()
-        
-        # Add documents to vector store
-        documents = [chunk["chunk_content"] for chunk in dataset["chunks"]]
-        vector_store.add_documents(documents)
         
         # Retrieve similar documents
         similar_docs = vector_store.get_similar_documents(question, top_k=num_results)
+        if not similar_docs:
+            logging.warning(f"No relevant documents found for question: {question}")
+            return "I apologize, but I couldn't find relevant information to answer your question."
+            
         context = " ".join([doc["text"] for doc in similar_docs])
         
         # Get LLM handler
@@ -62,7 +62,7 @@ def generate_rag_response(question: str, db, dataset_id, llm_name: str, num_resu
         
         # Generate answer
         answers = llm_handler.generate_answers([question], context)
-        return answers[0]
+        return answers[0] if answers else "Sorry, I encountered an error while generating the response."
     except Exception as e:
         logging.error(f"Error generating RAG response: {e}")
         return f"Error generating response: {str(e)}"

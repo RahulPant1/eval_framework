@@ -125,6 +125,7 @@ def insert_initial_data(db):
         vector_store_data = {
             "store_name": "Chroma",
             "store_type": "Vector Database",
+            "collection_name": "eval_docs",
             "connection_details": {
                 "persist_directory": "./chroma_db",
                 "client_settings": {},
