@@ -90,14 +90,24 @@ class QAPairParser:
         return None, None
 
 def load_data_from_csv(csv_file_path):
-    """Loads data from a CSV file."""
-    try:
-        df = pd.read_csv(csv_file_path)
-        if 'chunk_content' not in df.columns:
-            raise ValueError("CSV file must contain a column named 'chunk_content'")
-        chunks = df['chunk_content'].tolist()
-        logging.info(f"Loaded {len(chunks)} chunks from CSV file: {csv_file_path}")
-        return chunks
-    except (FileNotFoundError, ValueError, pd.errors.EmptyDataError, pd.errors.ParserError) as e:
-        logging.error(f"Error loading data from CSV: {e}")
-        raise
+    """Loads data from a CSV file with encoding detection."""
+    encodings = ['utf-8', 'latin1', 'cp1252', 'iso-8859-1']
+    
+    for encoding in encodings:
+        try:
+            df = pd.read_csv(csv_file_path, encoding=encoding)
+            if 'chunk_content' not in df.columns:
+                raise ValueError("CSV file must contain a column named 'chunk_content'")
+            chunks = df['chunk_content'].tolist()
+            logging.info(f"Loaded {len(chunks)} chunks from CSV file: {csv_file_path} using {encoding} encoding")
+            return chunks
+        except UnicodeDecodeError:
+            continue
+        except (FileNotFoundError, ValueError, pd.errors.EmptyDataError, pd.errors.ParserError) as e:
+            logging.error(f"Error loading data from CSV: {e}")
+            raise
+    
+    # If no encoding worked
+    error_msg = f"Failed to read CSV file with any of the attempted encodings: {', '.join(encodings)}"
+    logging.error(error_msg)
+    raise UnicodeDecodeError(error_msg)

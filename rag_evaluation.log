@@ -885,3 +885,2201 @@ GenerateContentResponse(
 2025-04-08 20:50:55,147 - INFO - Evaluation harnesses collection already has data, skipping insertion.
 2025-04-08 20:50:55,148 - INFO - Test suites collection already has data, skipping insertion.
 2025-04-08 20:50:55,148 - INFO - Database initialization completed successfully!
+2025-04-08 23:47:47,920 - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2025-04-08 23:47:47,921 - INFO - NumExpr defaulting to 16 threads.
+2025-04-08 23:47:48,139 - INFO - PyTorch version 2.3.1 available.
+2025-04-08 23:47:50,624 - INFO - Setting up database connection...
+2025-04-08 23:47:50,627 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:47:50,627 - INFO - Loading data from sample_data.csv...
+2025-04-08 23:47:50,628 - ERROR - Error loading data from CSV: 'utf-8' codec can't decode byte 0x96 in position 2611: invalid start byte
+2025-04-08 23:47:50,628 - ERROR - Error storing dataset: 'utf-8' codec can't decode byte 0x96 in position 2611: invalid start byte
+2025-04-08 23:47:50,628 - ERROR - Error in main: 'utf-8' codec can't decode byte 0x96 in position 2611: invalid start byte
+2025-04-08 23:49:43,366 - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2025-04-08 23:49:43,367 - INFO - NumExpr defaulting to 16 threads.
+2025-04-08 23:49:43,627 - INFO - PyTorch version 2.3.1 available.
+2025-04-08 23:49:45,500 - INFO - Setting up database connection...
+2025-04-08 23:49:45,502 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:49:45,503 - INFO - Loading data from sample_data.csv...
+2025-04-08 23:49:45,508 - INFO - Loaded 6 chunks from CSV file: sample_data.csv using latin1 encoding
+2025-04-08 23:49:45,511 - INFO - Dataset stored with ID: 67f568c15914890e8ab32924
+2025-04-08 23:49:45,511 - INFO - Adding chunks to vector store...
+2025-04-08 23:49:45,512 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:49:45,516 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:49:45,516 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:49:49,078 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-08 23:49:49,158 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:49:49,756 - INFO - Chunks successfully added to vector store
+2025-04-08 23:49:49,756 - INFO - Generating synthetic QA pairs using Gemini 1.5 Flash...
+2025-04-08 23:49:49,758 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-08 23:49:50,708 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?\nAnswer: RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, retrieved by a separate component, leading to more accurate and informative responses.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.09117312509505475
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 61,
+        "total_token_count": 180
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:49:50,708 - INFO - Final extracted text: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+Answer: RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, retrieved by a separate component, leading to more accurate and informative responses.
+
+2025-04-08 23:49:50,709 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:49:50,710 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 23:49:51,751 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What are vector databases and what are some examples?\nAnswer: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings representing semantic information.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.03615272261879661
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 55,
+        "total_token_count": 174
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:49:51,752 - INFO - Final extracted text: Question: What are vector databases and what are some examples?
+Answer: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings representing semantic information.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.
+
+2025-04-08 23:49:51,752 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:49:51,753 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query.
+2025-04-08 23:49:52,848 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?\nAnswer: RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) which assess document retrieval, and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) which assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.02179202371173435
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 126,
+        "candidates_token_count": 90,
+        "total_token_count": 216
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:49:52,849 - INFO - Final extracted text: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
+Answer: RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) which assess document retrieval, and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) which assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.
+
+2025-04-08 23:49:52,849 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:49:52,851 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made.
+2025-04-08 23:49:53,822 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What are the steps involved in opening a savings account according to this Standard Operating Procedure?\nAnswer: The steps include Customer Identification (verifying a government-issued ID), KYC Compliance (filling out the form and checking against the registry), Customer Due Diligence (standard or escalated based on risk), Account Creation (entering details in the CBS), and finally, providing a Welcome Kit & Activation (including initial deposit).\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.19720533034380744
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 208,
+        "candidates_token_count": 85,
+        "total_token_count": 293
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:49:53,822 - INFO - Final extracted text: Question: What are the steps involved in opening a savings account according to this Standard Operating Procedure?
+Answer: The steps include Customer Identification (verifying a government-issued ID), KYC Compliance (filling out the form and checking against the registry), Customer Due Diligence (standard or escalated based on risk), Account Creation (entering details in the CBS), and finally, providing a Welcome Kit & Activation (including initial deposit).
+
+2025-04-08 23:49:53,823 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:49:53,825 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions.
+2025-04-08 23:49:54,817 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What are the eligibility requirements for a personal loan in the Retail Banking Division?\nAnswer: Salaried individuals must have a minimum monthly income of \u20b925,000, be aged between 21 and 60 years, and have a credit score above 700.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.11271481360158613
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 200,
+        "candidates_token_count": 62,
+        "total_token_count": 262
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:49:54,817 - INFO - Final extracted text: Question: What are the eligibility requirements for a personal loan in the Retail Banking Division?
+Answer: Salaried individuals must have a minimum monthly income of ₹25,000, be aged between 21 and 60 years, and have a credit score above 700.
+
+2025-04-08 23:49:54,818 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:49:54,818 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence.
+2025-04-08 23:49:55,590 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What is the resolution timeline for ATM dispute resolution?\nAnswer: Disputes must be resolved within 7 working days.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.06726730328339797
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 218,
+        "candidates_token_count": 26,
+        "total_token_count": 244
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:49:55,591 - INFO - Final extracted text: Question: What is the resolution timeline for ATM dispute resolution?
+Answer: Disputes must be resolved within 7 working days.
+
+2025-04-08 23:49:55,591 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:49:55,594 - INFO - Generated 6 QA pairs
+2025-04-08 23:49:55,594 - INFO - Creating test suite...
+2025-04-08 23:49:55,596 - INFO - Test suite created with ID: 67f568cb5914890e8ab3292c
+2025-04-08 23:49:55,596 - INFO - Running evaluation with Gemini 1.5 Flash...
+2025-04-08 23:49:55,612 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:49:55,616 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:49:55,616 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:49:58,999 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:49:59,028 - INFO - Calling generate_answers method
+2025-04-08 23:49:59,028 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+
+Context: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 23:50:01,155 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the model's internal knowledge (which may be outdated or incomplete), RAG first retrieves relevant information from a knowledge base, allowing the model to produce more accurate and informative responses.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.034066103398799896
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 304,
+        "candidates_token_count": 64,
+        "total_token_count": 368
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:50:02,726 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:50:02,729 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:50:02,729 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:50:05,321 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:50:05,342 - INFO - Calling generate_answers method
+2025-04-08 23:50:05,342 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are vector databases and what are some examples?
+
+Context: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-08 23:50:07,372 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings.  These embeddings represent the semantic meaning and relationships of data like text or images in a numerical format.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.027413133989300644
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 295,
+        "candidates_token_count": 57,
+        "total_token_count": 352
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:50:07,377 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:50:07,380 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:50:07,380 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:50:10,494 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:50:10,510 - INFO - Calling generate_answers method
+2025-04-08 23:50:10,510 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
+
+Context: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 23:50:12,836 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Evaluation metrics for RAG systems fall into three categories:\n\n1. **Retrieval-focused metrics:** These assess the quality of the retrieved documents, including precision, recall, and mean reciprocal rank (MRR).\n\n2. **Generation-focused metrics:** These evaluate the quality of the generated text itself, using metrics like BLEU, ROUGE, and METEOR.\n\n3. **RAG-specific metrics:** These measure how well the generated response uses the retrieved information and answers the original query.  Examples include faithfulness and relevance.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.06774137621728059
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 301,
+        "candidates_token_count": 107,
+        "total_token_count": 408
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:50:12,852 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:50:12,863 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:50:12,863 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:50:17,931 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:50:17,947 - INFO - Calling generate_answers method
+2025-04-08 23:50:17,947 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are the steps involved in opening a savings account according to this Standard Operating Procedure?
+
+Context: Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made. Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions. Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence.
+2025-04-08 23:50:20,831 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided Standard Operating Procedure for Opening a Savings Account, the steps are:\n\n1. **Customer Identification:** Collect and verify a valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) against the provided name and address proof.\n\n2. **KYC Compliance:** Ensure the Know Your Customer (KYC) form is completed and cross-checked against the Central KYC Registry.\n\n3. **Customer Due Diligence:** Conduct normal due diligence for low-risk customers. For high-risk customers, escalate to Compliance for enhanced due diligence.\n\n4. **Account Creation:** Enter customer details into the Core Banking System (CBS) and assign a unique Customer ID.\n\n5. **Welcome Kit & Activation:** Provide the account number, cheque book, debit card (if opted for), and set up mobile banking.  The account becomes active upon the initial deposit.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.04850246618082235
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 564,
+        "candidates_token_count": 182,
+        "total_token_count": 746
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:50:20,851 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:50:20,853 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:50:20,853 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:50:23,447 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:50:23,463 - INFO - Calling generate_answers method
+2025-04-08 23:50:23,463 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are the eligibility requirements for a personal loan in the Retail Banking Division?
+
+Context: Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions. Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made. Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence.
+2025-04-08 23:50:25,579 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided text from \"Personal Loan Disbursement Guidelines (Retail Banking Division),\" the eligibility requirements for a personal loan are:\n\n* **Minimum monthly income:** \u20b925,000 for salaried individuals.\n* **Age:** 21-60 years.\n* **Credit score:** Above 700.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.015872228313499773
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 562,
+        "candidates_token_count": 71,
+        "total_token_count": 633
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:50:25,587 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:50:25,591 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:50:25,591 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:50:28,370 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:50:28,385 - INFO - Calling generate_answers method
+2025-04-08 23:50:28,385 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What is the resolution timeline for ATM dispute resolution?
+
+Context: Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence. Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made. Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions.
+2025-04-08 23:50:30,283 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided text from the \"Procedure for Handling ATM Disputes (Customer Service Manual),\" ATM disputes must be resolved within **7 working days**.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.022219115495681764
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 557,
+        "candidates_token_count": 30,
+        "total_token_count": 587
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:50:30,300 - INFO - Evaluation completed with 6 results
+2025-04-08 23:50:30,304 - INFO - Generated metrics reports: reports/rag_evaluation_report_20250408_235030.html
+2025-04-08 23:50:30,304 - INFO - Generated metrics report at: {'html': 'reports/rag_evaluation_report_20250408_235030.html'}
+2025-04-08 23:54:26,147 - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2025-04-08 23:54:26,147 - INFO - NumExpr defaulting to 16 threads.
+2025-04-08 23:54:26,283 - INFO - PyTorch version 2.3.1 available.
+2025-04-08 23:54:27,526 - INFO - Setting up database connection...
+2025-04-08 23:54:27,528 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:54:27,528 - INFO - Loading data from sample_data.csv...
+2025-04-08 23:54:27,531 - INFO - Loaded 6 chunks from CSV file: sample_data.csv using latin1 encoding
+2025-04-08 23:54:27,532 - INFO - Dataset stored with ID: 67f569dbc9000ad98fad615c
+2025-04-08 23:54:27,532 - INFO - Adding chunks to vector store...
+2025-04-08 23:54:27,533 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:54:27,535 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:54:27,535 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:54:30,345 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-08 23:54:30,399 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:54:30,797 - WARNING - Insert of existing embedding ID: 0
+2025-04-08 23:54:30,797 - WARNING - Insert of existing embedding ID: 1
+2025-04-08 23:54:30,797 - WARNING - Insert of existing embedding ID: 2
+2025-04-08 23:54:30,797 - WARNING - Insert of existing embedding ID: 3
+2025-04-08 23:54:30,797 - WARNING - Insert of existing embedding ID: 4
+2025-04-08 23:54:30,797 - WARNING - Insert of existing embedding ID: 5
+2025-04-08 23:54:30,798 - WARNING - Add of existing embedding ID: 0
+2025-04-08 23:54:30,798 - WARNING - Add of existing embedding ID: 1
+2025-04-08 23:54:30,798 - WARNING - Add of existing embedding ID: 2
+2025-04-08 23:54:30,798 - WARNING - Add of existing embedding ID: 3
+2025-04-08 23:54:30,798 - WARNING - Add of existing embedding ID: 4
+2025-04-08 23:54:30,798 - WARNING - Add of existing embedding ID: 5
+2025-04-08 23:54:30,809 - INFO - Chunks successfully added to vector store
+2025-04-08 23:54:30,809 - INFO - Generating synthetic QA pairs using Gemini 1.5 Flash...
+2025-04-08 23:54:30,811 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-08 23:54:31,801 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?\nAnswer: RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thus addressing limitations and producing more accurate and informative responses.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.02446388992769965
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 58,
+        "total_token_count": 177
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:31,801 - INFO - Final extracted text: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+Answer: RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thus addressing limitations and producing more accurate and informative responses.
+
+2025-04-08 23:54:31,802 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:54:31,803 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 23:54:32,900 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What are vector databases and what types of data do they handle?\nAnswer: Vector databases are specialized systems that store and efficiently query high-dimensional vector embeddings representing semantic information from text, images, or other data types.  They capture meaning and relationships in a numerical format.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.11942369362403607
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 58,
+        "total_token_count": 177
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:32,901 - INFO - Final extracted text: Question: What are vector databases and what types of data do they handle?
+Answer: Vector databases are specialized systems that store and efficiently query high-dimensional vector embeddings representing semantic information from text, images, or other data types.  They capture meaning and relationships in a numerical format.
+
+2025-04-08 23:54:32,901 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:54:32,903 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query.
+2025-04-08 23:54:33,953 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?\nAnswer: RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) to assess document retrieval and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.031860898050029625
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 126,
+        "candidates_token_count": 89,
+        "total_token_count": 215
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:33,953 - INFO - Final extracted text: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
+Answer: RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) to assess document retrieval and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.
+
+2025-04-08 23:54:33,953 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:54:33,955 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made.
+2025-04-08 23:54:34,795 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What documents are required for customer identification when opening a savings account?\nAnswer: Valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID, along with address proof.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.10984935079302106
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 208,
+        "candidates_token_count": 42,
+        "total_token_count": 250
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:34,796 - INFO - Final extracted text: Question: What documents are required for customer identification when opening a savings account?
+Answer: Valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID, along with address proof.
+
+2025-04-08 23:54:34,796 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:54:34,797 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions.
+2025-04-08 23:54:35,891 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What are the minimum income requirements and age limits for a personal loan under these guidelines?\nAnswer: Salaried individuals must have a minimum monthly income of \u20b925,000 and be between 21 and 60 years old.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0993368220779131
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 200,
+        "candidates_token_count": 53,
+        "total_token_count": 253
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:35,892 - INFO - Final extracted text: Question: What are the minimum income requirements and age limits for a personal loan under these guidelines?
+Answer: Salaried individuals must have a minimum monthly income of ₹25,000 and be between 21 and 60 years old.
+
+2025-04-08 23:54:35,901 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:54:35,902 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence.
+2025-04-08 23:54:36,588 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What is the resolution timeline for ATM transaction disputes?\nAnswer: Disputes must be resolved within 7 working days.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.01742553596313183
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 218,
+        "candidates_token_count": 26,
+        "total_token_count": 244
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:36,588 - INFO - Final extracted text: Question: What is the resolution timeline for ATM transaction disputes?
+Answer: Disputes must be resolved within 7 working days.
+
+2025-04-08 23:54:36,588 - INFO - Successfully parsed 1 QA pairs.
+2025-04-08 23:54:36,592 - INFO - Generated 6 QA pairs
+2025-04-08 23:54:36,592 - INFO - Creating test suite...
+2025-04-08 23:54:36,593 - INFO - Test suite created with ID: 67f569e4c9000ad98fad6164
+2025-04-08 23:54:36,593 - INFO - Running evaluation with Gemini 1.5 Flash...
+2025-04-08 23:54:36,597 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:54:36,600 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:54:36,600 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:54:39,410 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:54:39,430 - INFO - Calling generate_answers method
+2025-04-08 23:54:39,430 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+
+Context: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 23:54:41,516 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the model's internal knowledge (which may be outdated or incomplete), RAG first retrieves relevant information from a knowledge base, allowing the model to produce more accurate and informative responses.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.03115132264792919
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 304,
+        "candidates_token_count": 64,
+        "total_token_count": 368
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:43,043 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:54:43,046 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:54:43,046 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:54:45,662 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:54:45,678 - INFO - Calling generate_answers method
+2025-04-08 23:54:45,678 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are vector databases and what types of data do they handle?
+
+Context: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-08 23:54:47,772 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided text, vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings.  These embeddings are numerical representations of semantic information from various data types, including text and images.  The databases are designed to handle data that can be represented as vectors, capturing the meaning and relationships between data points.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.09692414838876297
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 298,
+        "candidates_token_count": 67,
+        "total_token_count": 365
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:47,779 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:54:47,781 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:54:47,781 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:54:50,771 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:54:50,786 - INFO - Calling generate_answers method
+2025-04-08 23:54:50,786 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
+
+Context: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-08 23:54:51,968 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Evaluation metrics for RAG systems are categorized into retrieval-focused and generation-focused metrics.\n\n**Retrieval-focused metrics** assess the quality of the retrieved documents and include precision, recall, and mean reciprocal rank (MRR).\n\n**Generation-focused metrics** evaluate the quality of the generated text and include BLEU, ROUGE, and METEOR.\n\nFinally, **RAG-specific metrics** such as faithfulness and relevance measure how well the generated response utilizes the retrieved information and answers the original query.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.05861311332852233
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 301,
+        "candidates_token_count": 102,
+        "total_token_count": 403
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:51,978 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:54:51,980 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:54:51,980 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:54:54,636 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:54:54,652 - INFO - Calling generate_answers method
+2025-04-08 23:54:54,652 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What documents are required for customer identification when opening a savings account?
+
+Context: Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made. Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions. Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence.
+2025-04-08 23:54:56,711 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the \"Standard Operating Procedure for Opening a Savings Account\" document, the required documents for customer identification are a valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and a separate address proof.  The name and address on both documents are then verified.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.08745667894007796
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 560,
+        "candidates_token_count": 59,
+        "total_token_count": 619
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:54:56,718 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:54:56,720 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:54:56,720 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:54:59,358 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:54:59,377 - INFO - Calling generate_answers method
+2025-04-08 23:54:59,377 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are the minimum income requirements and age limits for a personal loan under these guidelines?
+
+Context: Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions. Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made. Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence.
+2025-04-08 23:55:01,356 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided \"Personal Loan Disbursement Guidelines (Retail Banking Division)\" document, the minimum monthly income requirement for a personal loan is \u20b925,000, and the age limit is 21-60 years.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.02771998882293701
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 564,
+        "candidates_token_count": 50,
+        "total_token_count": 614
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:55:01,363 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:55:01,365 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:55:01,365 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:55:04,383 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:55:04,397 - INFO - Calling generate_answers method
+2025-04-08 23:55:04,397 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What is the resolution timeline for ATM transaction disputes?
+
+Context: Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence. Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made. Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions.
+2025-04-08 23:55:06,292 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided text from the \"Procedure for Handling ATM Disputes (Customer Service Manual),\" ATM transaction disputes must be resolved within **7 working days**.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.03686303861679569
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 557,
+        "candidates_token_count": 31,
+        "total_token_count": 588
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-08 23:55:06,307 - INFO - Evaluation completed with 6 results
+2025-04-08 23:55:06,312 - ERROR - Error generating metrics report: 'actual_answer'
+2025-04-08 23:55:06,312 - INFO - Generated metrics report at: None
+2025-04-08 23:55:53,691 - INFO - Cleaning up ChromaDB collection...
+2025-04-08 23:55:53,694 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:55:53,699 - INFO - Use pytorch device_name: cuda
+2025-04-08 23:55:53,699 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-08 23:55:56,921 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-08 23:55:56,922 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-08 23:55:56,950 - INFO - Successfully cleaned up eval_docs collection.
+2025-04-08 23:55:56,950 - INFO - ChromaDB cleanup completed.
+2025-04-09 00:02:43,276 - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2025-04-09 00:02:43,276 - INFO - NumExpr defaulting to 16 threads.
+2025-04-09 00:02:43,401 - INFO - PyTorch version 2.3.1 available.
+2025-04-09 00:02:44,588 - INFO - Setting up database connection...
+2025-04-09 00:02:44,590 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-09 00:02:44,590 - INFO - Loading data from sample_data.csv...
+2025-04-09 00:02:44,593 - INFO - Loaded 6 chunks from CSV file: sample_data.csv using latin1 encoding
+2025-04-09 00:02:44,594 - INFO - Dataset stored with ID: 67f56bcc33481c93cca90f9d
+2025-04-09 00:02:44,594 - INFO - Adding chunks to vector store...
+2025-04-09 00:02:44,595 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-09 00:02:44,598 - INFO - Use pytorch device_name: cuda
+2025-04-09 00:02:44,598 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-09 00:02:47,937 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-04-09 00:02:47,988 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-09 00:02:48,367 - INFO - Chunks successfully added to vector store
+2025-04-09 00:02:48,367 - INFO - Generating synthetic QA pairs using Gemini 1.5 Flash...
+2025-04-09 00:02:48,369 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-09 00:02:50,583 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?\nAnswer: RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, addressing limitations through a two-step process of retrieving relevant information and then using a generative model to create a response based on that information.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.07530760120701145
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 74,
+        "total_token_count": 193
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:02:50,583 - INFO - Final extracted text: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+Answer: RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, addressing limitations through a two-step process of retrieving relevant information and then using a generative model to create a response based on that information.
+
+2025-04-09 00:02:50,583 - INFO - Successfully parsed 1 QA pairs.
+2025-04-09 00:02:50,585 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-09 00:02:51,405 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What are vector databases and what are some examples?\nAnswer: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings, representing semantic information in a numerical format.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.06507392724355061
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 119,
+        "candidates_token_count": 60,
+        "total_token_count": 179
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:02:51,405 - INFO - Final extracted text: Question: What are vector databases and what are some examples?
+Answer: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings, representing semantic information in a numerical format.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.
+
+2025-04-09 00:02:51,405 - INFO - Successfully parsed 1 QA pairs.
+2025-04-09 00:02:51,407 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query.
+2025-04-09 00:02:52,702 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?\nAnswer: RAG systems are evaluated using retrieval-focused metrics (precision, recall, MRR) to assess document retrieval and generation-focused metrics (BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.06501717037624782
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 126,
+        "candidates_token_count": 81,
+        "total_token_count": 207
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:02:52,702 - INFO - Final extracted text: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
+Answer: RAG systems are evaluated using retrieval-focused metrics (precision, recall, MRR) to assess document retrieval and generation-focused metrics (BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.
+
+2025-04-09 00:02:52,703 - INFO - Successfully parsed 1 QA pairs.
+2025-04-09 00:02:52,703 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made.
+2025-04-09 00:02:53,442 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What documents are required for customer identification when opening a savings account?\nAnswer: Valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID are required, along with address proof.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.05102670192718506
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 208,
+        "candidates_token_count": 44,
+        "total_token_count": 252
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:02:53,443 - INFO - Final extracted text: Question: What documents are required for customer identification when opening a savings account?
+Answer: Valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID are required, along with address proof.
+
+2025-04-09 00:02:53,445 - INFO - Successfully parsed 1 QA pairs.
+2025-04-09 00:02:53,445 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions.
+2025-04-09 00:02:54,620 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What are the minimum income and age requirements for a personal loan applicant under these guidelines?\nAnswer: The minimum monthly income is \u20b925,000, and the age must be between 21 and 60 years.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.12858926548677332
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 200,
+        "candidates_token_count": 51,
+        "total_token_count": 251
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:02:54,620 - INFO - Final extracted text: Question: What are the minimum income and age requirements for a personal loan applicant under these guidelines?
+Answer: The minimum monthly income is ₹25,000, and the age must be between 21 and 60 years.
+
+2025-04-09 00:02:54,620 - INFO - Successfully parsed 1 QA pairs.
+2025-04-09 00:02:54,621 - INFO - Prompt sent to Gemini model: Generate 1 question-answer pairs from the following text. Format each pair as 'Question: <question>
+Answer: <answer>'
+
+Text: Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence.
+2025-04-09 00:02:55,231 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Question: What is the resolution timeline for ATM disputes?\nAnswer: Disputes must be resolved within 7 working days.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.09554029464721679
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 218,
+        "candidates_token_count": 25,
+        "total_token_count": 243
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:02:55,231 - INFO - Final extracted text: Question: What is the resolution timeline for ATM disputes?
+Answer: Disputes must be resolved within 7 working days.
+
+2025-04-09 00:02:55,231 - INFO - Successfully parsed 1 QA pairs.
+2025-04-09 00:02:55,234 - INFO - Generated 6 QA pairs
+2025-04-09 00:02:55,234 - INFO - Creating test suite...
+2025-04-09 00:02:55,235 - INFO - Test suite created with ID: 67f56bd733481c93cca90fa5
+2025-04-09 00:02:55,236 - INFO - Running evaluation with Gemini 1.5 Flash...
+2025-04-09 00:02:55,242 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-09 00:02:55,249 - INFO - Use pytorch device_name: cuda
+2025-04-09 00:02:55,249 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-09 00:02:57,941 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-09 00:02:57,971 - INFO - Calling generate_answers method
+2025-04-09 00:02:57,971 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?
+
+Context: The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-09 00:02:59,963 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the knowledge embedded during the model's training, RAG retrieves relevant information from a knowledge base before generating a response, leading to more accurate and informative outputs.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.07386043866475424
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 304,
+        "candidates_token_count": 60,
+        "total_token_count": 364
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:03:01,564 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-09 00:03:01,567 - INFO - Use pytorch device_name: cuda
+2025-04-09 00:03:01,567 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-09 00:03:04,283 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-09 00:03:04,298 - INFO - Calling generate_answers method
+2025-04-09 00:03:04,298 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are vector databases and what are some examples?
+
+Context: Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector. Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources.
+2025-04-09 00:03:06,398 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings.  These embeddings represent the semantic information of data (like text or images) in a numerical format that shows meaning and relationships.  Examples of popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.09830859213164359
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 295,
+        "candidates_token_count": 66,
+        "total_token_count": 361
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:03:06,410 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-09 00:03:06,413 - INFO - Use pytorch device_name: cuda
+2025-04-09 00:03:06,413 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-09 00:03:09,191 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-09 00:03:09,206 - INFO - Calling generate_answers method
+2025-04-09 00:03:09,206 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?
+
+Context: Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query. The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources. Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector.
+2025-04-09 00:03:11,517 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Evaluation metrics for RAG systems include:\n\n* **Retrieval-focused metrics:** precision, recall, and mean reciprocal rank (MRR), assessing the relevance of retrieved documents.\n* **Generation-focused metrics:** BLEU, ROUGE, and METEOR, evaluating the quality of the generated text compared to reference answers.\n* **RAG-specific metrics:** faithfulness and relevance, measuring how well the generated response uses retrieved information and addresses the original query.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.031748569529989494
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 301,
+        "candidates_token_count": 92,
+        "total_token_count": 393
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:03:11,531 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-09 00:03:11,543 - INFO - Use pytorch device_name: cuda
+2025-04-09 00:03:11,543 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-09 00:03:14,127 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-09 00:03:14,142 - INFO - Calling generate_answers method
+2025-04-09 00:03:14,142 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What documents are required for customer identification when opening a savings account?
+
+Context: Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made. Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions. Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence.
+2025-04-09 00:03:15,090 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the \"Standard Operating Procedure for Opening a Savings Account\" document, the required documents for customer identification are a valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and a separate address proof.  The name and address on both documents are then verified.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.09101190405376887
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 560,
+        "candidates_token_count": 59,
+        "total_token_count": 619
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:03:15,105 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-09 00:03:15,109 - INFO - Use pytorch device_name: cuda
+2025-04-09 00:03:15,109 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-09 00:03:17,680 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-09 00:03:17,696 - INFO - Calling generate_answers method
+2025-04-09 00:03:17,696 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What are the minimum income and age requirements for a personal loan applicant under these guidelines?
+
+Context: Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions. Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made. Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence.
+2025-04-09 00:03:19,646 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided text, the minimum income requirement for a personal loan applicant is \u20b925,000 per month, and the age requirement is between 21 and 60 years old.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.10409945110942043
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 564,
+        "candidates_token_count": 43,
+        "total_token_count": 607
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:03:19,653 - INFO - Connected to MongoDB: mongodb://localhost:27017/, Database: rag_evaluation
+2025-04-09 00:03:19,656 - INFO - Use pytorch device_name: cuda
+2025-04-09 00:03:19,656 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-09 00:03:24,032 - INFO - Successfully retrieved existing eval_docs collection.
+2025-04-09 00:03:24,046 - INFO - Calling generate_answers method
+2025-04-09 00:03:24,046 - INFO - Prompt sent to Gemini model: Answer the following question based on the context: Question: What is the resolution timeline for ATM disputes?
+
+Context: Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)
+
+In case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:
+
+Complaint Lodgment:
+
+Customer can register a dispute via branch, call center, or mobile app.
+
+Obtain transaction details: date, time, ATM ID, amount.
+
+Initial Acknowledgment:
+
+Send a complaint receipt SMS/email to the customer within 2 hours.
+
+Investigation:
+
+Check ATM logs and switch data.
+
+If the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).
+
+Resolution Timeline:
+
+Disputes must be resolved within 7 working days.
+
+Refund must be credited to the customer's account if found valid.
+
+Customer Notification:
+
+Inform customer of the outcome via SMS/email.
+
+Provide a reference number for future correspondence. Document Title: Standard Operating Procedure for Opening a Savings Account
+To open a savings account, follow the steps below:
+Customer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.
+KYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.
+Customer Due Diligence:
+For low-risk customers: proceed with normal due diligence.
+For high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.
+Account Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.
+Welcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made. Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)
+
+Eligibility Check:
+
+Salaried individuals must have a minimum monthly income of ?25,000.
+
+Age limit: 2160 years.
+
+Credit score must be above 700.
+
+Document Collection:
+
+Income proof (salary slips or ITR for 2 years)
+
+Address proof
+
+Identity proof
+
+Bank statements (last 6 months)
+
+Loan Sanctioning:
+
+Based on risk profile, tenure, and repayment capacity.
+
+Use the internal Loan Management System (LMS) to evaluate and approve.
+
+Disbursement:
+
+Post-approval, the loan amount is transferred to the applicant's bank account.
+
+Disbursement letter and repayment schedule are issued.
+
+ECS mandate is activated for EMI deductions.
+2025-04-09 00:03:24,996 - INFO - Received response from Gemini model: response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "Based on the provided text from the \"Procedure for Handling ATM Disputes (Customer Service Manual)\", ATM disputes must be resolved within **7 working days**.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.06613123019536336
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 556,
+        "candidates_token_count": 30,
+        "total_token_count": 586
+      },
+      "model_version": "gemini-1.5-flash"
+    }),
+)
+2025-04-09 00:03:25,003 - INFO - Evaluation completed with 6 results
+2025-04-09 00:03:25,006 - INFO - Generated metrics reports: reports/rag_evaluation_report_20250409_000325.html
+2025-04-09 00:03:25,006 - INFO - Generated metrics report at: {'html': 'reports/rag_evaluation_report_20250409_000325.html'}

@@ -1,0 +1,170 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>RAG Evaluation Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #2c3e50; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            .summary { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+            .metrics { margin-bottom: 20px; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .success { color: green; }
+            .failure { color: red; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>RAG Evaluation Report</h1>
+            <p>Generated: 2025-04-09T00:03:25.006547</p>
+            <p>Report ID: 67f56bf433481c93cca90fac</p>
+            
+            <div class="summary">
+                <h2>Evaluation Summary</h2>
+                <p><strong>Test Suite:</strong> Test Suite for Dataset 67f56bcc33481c93cca90f9d</p>
+                <p><strong>Dataset:</strong> sample_data.csv</p>
+                <p><strong>LLM:</strong> Gemini 1.5 Flash</p>
+                <p><strong>Number of Tests:</strong> 6</p>
+                <p><strong>Success Rate:</strong> 83.33%</p>
+            </div>
+            
+            <div class="metrics">
+                <h2>Aggregate Metrics</h2>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Average</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                    <tr>
+                        <td>BLEU</td>
+                        <td>0.2564</td>
+                        <td>0.1404</td>
+                        <td>0.4774</td>
+                    </tr>
+                    <tr>
+                        <td>ROUGE-1 F1</td>
+                        <td>0.4816</td>
+                        <td colspan="2">-</td>
+                    </tr>
+                    <tr>
+                        <td>ROUGE-2 F1</td>
+                        <td>0.2862</td>
+                        <td colspan="2">-</td>
+                    </tr>
+                    <tr>
+                        <td>ROUGE-L F1</td>
+                        <td>0.4584</td>
+                        <td colspan="2">-</td>
+                    </tr>
+                    <tr>
+                        <td>METEOR</td>
+                        <td>0.6961</td>
+                        <td>0.5015</td>
+                        <td>0.8987</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="per-question">
+                <h2>Per-Question Metrics</h2>
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Question</th>
+                        <th>Expected Answer</th>
+                        <th>Received Answer</th>
+                        <th>Success</th>
+                        <th>BLEU</th>
+                        <th>ROUGE-1 F1</th>
+                        <th>METEOR</th>
+                    </tr>
+    
+                    <tr>
+                        <td>1</td>
+                        <td>How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?</td>
+                        <td>RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, addressing limitations through a two-step process of retrieving relevant information and then using a generative model to create a response based on that information.</td>
+                        <td>RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the knowledge embedded during the model's training, RAG retrieves relevant information from a knowledge base before generating a response, leading to more accurate and informative outputs.
+</td>
+                        <td class="failure">No</td>
+                        <td>0.3534</td>
+                        <td>0.5500</td>
+                        <td>0.6665</td>
+                    </tr>
+        
+                    <tr>
+                        <td>2</td>
+                        <td>What are vector databases and what are some examples?</td>
+                        <td>Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings, representing semantic information in a numerical format.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.</td>
+                        <td>Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings.  These embeddings represent the semantic information of data (like text or images) in a numerical format that shows meaning and relationships.  Examples of popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB.
+</td>
+                        <td class="success">Yes</td>
+                        <td>0.4774</td>
+                        <td>0.7429</td>
+                        <td>0.8987</td>
+                    </tr>
+        
+                    <tr>
+                        <td>3</td>
+                        <td>What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?</td>
+                        <td>RAG systems are evaluated using retrieval-focused metrics (precision, recall, MRR) to assess document retrieval and generation-focused metrics (BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.</td>
+                        <td>Evaluation metrics for RAG systems include:
+
+* **Retrieval-focused metrics:** precision, recall, and mean reciprocal rank (MRR), assessing the relevance of retrieved documents.
+* **Generation-focused metrics:** BLEU, ROUGE, and METEOR, evaluating the quality of the generated text compared to reference answers.
+* **RAG-specific metrics:** faithfulness and relevance, measuring how well the generated response uses retrieved information and addresses the original query.
+</td>
+                        <td class="success">Yes</td>
+                        <td>0.1489</td>
+                        <td>0.3636</td>
+                        <td>0.5015</td>
+                    </tr>
+        
+                    <tr>
+                        <td>4</td>
+                        <td>What documents are required for customer identification when opening a savings account?</td>
+                        <td>Valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID are required, along with address proof.</td>
+                        <td>Based on the "Standard Operating Procedure for Opening a Savings Account" document, the required documents for customer identification are a valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and a separate address proof.  The name and address on both documents are then verified.
+</td>
+                        <td class="success">Yes</td>
+                        <td>0.1980</td>
+                        <td>0.3462</td>
+                        <td>0.5685</td>
+                    </tr>
+        
+                    <tr>
+                        <td>5</td>
+                        <td>What are the minimum income and age requirements for a personal loan applicant under these guidelines?</td>
+                        <td>The minimum monthly income is ₹25,000, and the age must be between 21 and 60 years.</td>
+                        <td>Based on the provided text, the minimum income requirement for a personal loan applicant is ₹25,000 per month, and the age requirement is between 21 and 60 years old.
+</td>
+                        <td class="success">Yes</td>
+                        <td>0.2201</td>
+                        <td>0.5000</td>
+                        <td>0.7732</td>
+                    </tr>
+        
+                    <tr>
+                        <td>6</td>
+                        <td>What is the resolution timeline for ATM disputes?</td>
+                        <td>Disputes must be resolved within 7 working days.</td>
+                        <td>Based on the provided text from the "Procedure for Handling ATM Disputes (Customer Service Manual)", ATM disputes must be resolved within **7 working days**.
+</td>
+                        <td class="success">Yes</td>
+                        <td>0.1404</td>
+                        <td>0.3871</td>
+                        <td>0.7681</td>
+                    </tr>
+        
+                </table>
+            </div>
+    
+        </div>
+    </body>
+    </html>
+    

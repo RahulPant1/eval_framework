@@ -57,6 +57,8 @@ def generate_metrics_report(db, evaluation_run_id, output_formats=["html", "mark
         for result in evaluation_run["results"]:
             question_metrics = {
                 "question": result["question"],
+                "expected_answer": result["expected_answer"],
+                "received_answer": result["rag_response"],
                 "success": result["success"],
                 "metrics": result["metrics"],
                 "explanation": result["explanation"]
@@ -348,6 +350,8 @@ def write_html_report(file, report):
                     <tr>
                         <th>#</th>
                         <th>Question</th>
+                        <th>Expected Answer</th>
+                        <th>Received Answer</th>
                         <th>Success</th>
                         <th>BLEU</th>
                         <th>ROUGE-1 F1</th>
@@ -362,6 +366,8 @@ def write_html_report(file, report):
                     <tr>
                         <td>{i+1}</td>
                         <td>{question['question']}</td>
+                        <td>{question['expected_answer']}</td>
+                        <td>{question['received_answer']}</td>
                         <td class="{success_class}">{success_text}</td>
                         <td>{question['metrics']['bleu']:.4f}</td>
                         <td>{question['metrics']['rouge']['rouge-1']['f1']:.4f}</td>
@@ -431,6 +437,8 @@ def write_markdown_report(file, report):
     
     for i, question in enumerate(report['per_question_metrics']):
         file.write(f"### Question {i+1}: {question['question']}\n\n")
+        file.write(f"- **Expected Answer:** {question['expected_answer']}  \n")
+        file.write(f"- **Received Answer:** {question['received_answer']}  \n")
         file.write(f"- **Success:** {'✅ Yes' if question['success'] else '❌ No'}  \n")
         file.write(f"- **Explanation:** {question['explanation']}  \n")
         file.write(f"- **Metrics:**  \n")
