@@ -52,31 +52,45 @@ The execution begins in the `main()` function of `main.py`, which:
 - Validates the presence of required API keys
 - Orchestrates the entire evaluation process
 
-### 2. Database Setup: `setup_database()`
+### 2. Database Setup
+
+The database setup is now split into two parts:
+
+#### 2.1 Database Initialization (One-time Setup)
+
+Before running the main evaluation, initialize the database using:
+
+```bash
+python init_database.py
+```
+
+This script:
+- Creates all required MongoDB collections
+- Populates initial reference data
+- Sets up the following collections:
+  - llms
+  - llm_endpoints
+  - model_deployments
+  - datasets
+  - prompt_templates
+  - synthetic_data
+  - evaluation_harnesses
+  - test_suites
+  - evaluation_runs
+  - test_results
+  - metrics
+  - metrics_definitions
+  - vector_store
+
+#### 2.2 Database Connection: `setup_database()`
 
 ```python
 db = setup_database()
 ```
 
 This function:
-- Calls `connect_to_mongodb()` to establish a connection to MongoDB
-- Calls `create_collections()` to ensure all required collections exist
-- Calls `insert_initial_data()` to populate reference data if collections are empty
-
-Collections created include:
-- llms
-- llm_endpoints
-- model_deployments
-- datasets
-- prompt_templates
-- synthetic_data
-- evaluation_harnesses
-- test_suites
-- evaluation_runs
-- test_results
-- metrics
-- metrics_definitions
-- vector_store
+- Establishes a connection to MongoDB
+- Returns the database connection object for use in subsequent operations
 
 ### 3. Dataset Storage and Vector Indexing: `store_dataset()`
 
@@ -155,14 +169,18 @@ This new function:
 
 The `VectorStore` class:
 - Uses SentenceTransformer to generate embeddings
-- **Stores embeddings in persistent ChromaDB** (stored in `./chroma_dev/` directory)
-- Provides similarity search functionality
+- **Stores embeddings in persistent ChromaDB**
+  - Configuration managed through MongoDB vector_store collection
+  - Persistent storage in configurable directory (default: `./chroma_db/`)
+  - Collection name and other settings fetched from database
+- Provides similarity search functionality with k-nearest neighbors (kNN)
 - **Implements robust error handling and retries for ChromaDB operations**
+- Supports dynamic configuration updates through MongoDB
 
 ### LLM Handlers (llm_handlers.py)
 
 The framework supports multiple LLMs through handler classes:
-- `GeminiLLMHandler`: Interfaces with Google's Gemini 1.5 Flash model (previously Gemini Pro)
+- `GeminiLLMHandler`: Interfaces with Google's Gemini 1.5 Flash model
 - Each handler implements methods for:
   - Generating QA pairs
   - Generating modified questions
