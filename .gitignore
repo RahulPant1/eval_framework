@@ -14,3 +14,15 @@ reports/rag_evaluation_report_20250408_144611.html
 reports/rag_evaluation_report_20250408_154527.html
 reports/rag_evaluation_report_20250408_194024.html
 reports/rag_evaluation_report_20250408_194520.html
+__pycache__/report_generator.cpython-311.pyc
+__pycache__/utils.cpython-311.pyc
+__pycache__/vector_store.cpython-311.pyc
+chroma_dev/chroma.sqlite3
+chroma_dev/30eb6332-369d-46ef-92cb-1e552f9151b3/data_level0.bin
+chroma_dev/30eb6332-369d-46ef-92cb-1e552f9151b3/header.bin
+chroma_dev/30eb6332-369d-46ef-92cb-1e552f9151b3/length.bin
+chroma_dev/30eb6332-369d-46ef-92cb-1e552f9151b3/link_lists.bin
+chroma_dev/86b3af8f-a9b5-4f02-abd9-4b6dad268491/data_level0.bin
+chroma_dev/86b3af8f-a9b5-4f02-abd9-4b6dad268491/header.bin
+chroma_dev/86b3af8f-a9b5-4f02-abd9-4b6dad268491/length.bin
+chroma_dev/86b3af8f-a9b5-4f02-abd9-4b6dad268491/link_lists.bin
