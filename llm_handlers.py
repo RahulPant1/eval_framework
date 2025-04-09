@@ -23,9 +23,9 @@ class BaseLLMHandler:
         """Generate QA pairs from context"""
         raise NotImplementedError
         
-    def generate_modified_question(self, question: str) -> List[str]:
-        """Generate modified versions of a question"""
-        raise NotImplementedError
+    # def generate_modified_question(self, question: str) -> List[str]:
+    #     """Generate modified versions of a question"""
+    #     raise NotImplementedError
         
     # def generate_rag_response(self, question: str, context: str) -> str:
     #     """Generate a response based on the question and context"""
@@ -80,23 +80,23 @@ class GeminiLLMHandler(BaseLLMHandler):
             return f"Error generating QA pairs: {str(e)}"
 
     
-    def generate_modified_question(self, question: str) -> List[str]:
-        """
-        Generate modified versions of a question using Gemini 1.5 Flash.
+    # def generate_modified_question(self, question: str) -> List[str]:
+    #     """
+    #     Generate modified versions of a question using Gemini 1.5 Flash.
         
-        Args:
-            question: Original question to modify
+    #     Args:
+    #         question: Original question to modify
             
-        Returns:
-            List of modified questions
-        """
-        try:
-            prompt = f"Generate a modified version of the following question, without changing its meaning. Provide 3 variations: 1) Paraphrasing, 2) Adding noise, 3) Changing sentence structure. Original Question: {question}"
-            response = self.model.generate_content(prompt)
-            return response.text.split("\n")
-        except Exception as e:
-            logging.error(f"Error generating modified questions with Gemini: {e}")
-            return [f"Error generating modified question: {str(e)}"]
+    #     Returns:
+    #         List of modified questions
+    #     """
+    #     try:
+    #         prompt = f"Generate a modified version of the following question, without changing its meaning. Provide 3 variations: 1) Paraphrasing, 2) Adding noise, 3) Changing sentence structure. Original Question: {question}"
+    #         response = self.model.generate_content(prompt)
+    #         return response.text.split("\n")
+    #     except Exception as e:
+    #         logging.error(f"Error generating modified questions with Gemini: {e}")
+    #         return [f"Error generating modified question: {str(e)}"]
     
     def generate_answers(self, questions: List[str], context: str) -> List[str]:
         """
@@ -177,22 +177,22 @@ class Llama2LLMHandler(BaseLLMHandler):
         
         return "\n\n".join(qa_pairs)
     
-    def generate_modified_question(self, question: str) -> List[str]:
-        """
-        Generate modified versions of a question using Llama 2.
-        This is a simplified implementation with placeholder functionality.
+    # def generate_modified_question(self, question: str) -> List[str]:
+    #     """
+    #     Generate modified versions of a question using Llama 2.
+    #     This is a simplified implementation with placeholder functionality.
         
-        Args:
-            question: Original question to modify
+    #     Args:
+    #         question: Original question to modify
             
-        Returns:
-            List of modified questions
-        """
-        return [
-            f"Paraphrased: {question}", 
-            f"With noise: {question} (with some additional terms)", 
-            f"Restructured: Have you considered {question.lower()}?"
-        ]
+    #     Returns:
+    #         List of modified questions
+    #     """
+    #     return [
+    #         f"Paraphrased: {question}", 
+    #         f"With noise: {question} (with some additional terms)", 
+    #         f"Restructured: Have you considered {question.lower()}?"
+    #     ]
     
     # def generate_rag_response(self, question: str, context: str) -> str:
     #     """

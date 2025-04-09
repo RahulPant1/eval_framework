@@ -233,34 +233,34 @@ def run_evaluation_harness(db, test_suite_id, llm_name: str) -> Dict[str, Any]:
             }
             
             # If modified questions exist, evaluate them too
-            if "modified_questions" in data_point and data_point["modified_questions"]:
-                modified_results = []
-                for modified_question in data_point["modified_questions"]:
-                    # Generate RAG response for modified question
-                    mod_rag_response = generate_rag_response(modified_question, db, dataset_id, llm_name)
+            # if "modified_questions" in data_point and data_point["modified_questions"]:
+            #     modified_results = []
+            #     for modified_question in data_point["modified_questions"]:
+            #         # Generate RAG response for modified question
+            #         mod_rag_response = generate_rag_response(modified_question, db, dataset_id, llm_name)
                     
-                    # Evaluate response
-                    mod_success, mod_explanation = evaluate_response(mod_rag_response, expected_answer)
+            #         # Evaluate response
+            #         mod_success, mod_explanation = evaluate_response(mod_rag_response, expected_answer)
                     
-                    # Calculate metrics
-                    mod_bleu = calculate_bleu(expected_answer, mod_rag_response)
-                    mod_rouge = calculate_rouge(expected_answer, mod_rag_response)
-                    mod_meteor = calculate_meteor(expected_answer, mod_rag_response)
+            #         # Calculate metrics
+            #         mod_bleu = calculate_bleu(expected_answer, mod_rag_response)
+            #         mod_rouge = calculate_rouge(expected_answer, mod_rag_response)
+            #         mod_meteor = calculate_meteor(expected_answer, mod_rag_response)
                     
-                    # Store modified result
-                    modified_results.append({
-                        "modified_question": modified_question,
-                        "rag_response": mod_rag_response,
-                        "success": mod_success,
-                        "explanation": mod_explanation,
-                        "metrics": {
-                            "bleu": mod_bleu,
-                            "rouge": mod_rouge,
-                            "meteor": mod_meteor
-                        }
-                    })
+            #         # Store modified result
+            #         modified_results.append({
+            #             "modified_question": modified_question,
+            #             "rag_response": mod_rag_response,
+            #             "success": mod_success,
+            #             "explanation": mod_explanation,
+            #             "metrics": {
+            #                 "bleu": mod_bleu,
+            #                 "rouge": mod_rouge,
+            #                 "meteor": mod_meteor
+            #             }
+            #         })
                 
-                result["modified_results"] = modified_results
+            #     result["modified_results"] = modified_results
             
             results.append(result)
         
