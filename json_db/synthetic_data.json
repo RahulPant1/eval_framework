@@ -1,0 +1,626 @@
+[
+  {
+    "dataset_id": "67f6bd03e47f3c32d8be8dde",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, addressing limitations by using a retrieval component to fetch relevant documents before generating a response.",
+    "llm_id": "llm_1",
+    "_id": "67f6bd0de47f3c32d8be8de0"
+  },
+  {
+    "dataset_id": "67f6bd03e47f3c32d8be8dde",
+    "chunk_id": null,
+    "question": "What are vector databases and what types of data do they typically handle?",
+    "answer": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings representing semantic information about text, images, or other data types.  They capture the meaning and relationships within this data in a numerical format.",
+    "llm_id": "llm_1",
+    "_id": "67f6bd0de47f3c32d8be8de1"
+  },
+  {
+    "dataset_id": "67f6bd03e47f3c32d8be8dde",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) assessing document retrieval and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) assessing generated text quality, as well as RAG-specific metrics like faithfulness and relevance.",
+    "llm_id": "llm_1",
+    "_id": "67f6bd0de47f3c32d8be8de2"
+  },
+  {
+    "dataset_id": "67f6bd03e47f3c32d8be8dde",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "Valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and address proof.",
+    "llm_id": "llm_1",
+    "_id": "67f6bd0de47f3c32d8be8de3"
+  },
+  {
+    "dataset_id": "67f6bd03e47f3c32d8be8dde",
+    "chunk_id": null,
+    "question": "What are the minimum income and age requirements for a personal loan applicant under these guidelines?",
+    "answer": "The minimum monthly income is \u20b925,000, and the applicant must be between 21 and 60 years old.",
+    "llm_id": "llm_1",
+    "_id": "67f6bd0de47f3c32d8be8de4"
+  },
+  {
+    "dataset_id": "67f6bd03e47f3c32d8be8dde",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM dispute resolution?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f6bd0de47f3c32d8be8de5"
+  },
+  {
+    "dataset_id": "67f6bf7927d844c81dccd1e1",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, addressing limitations by incorporating relevant information retrieved from a knowledge base before generating a response.",
+    "llm_id": "llm_1",
+    "_id": "67f6bf8327d844c81dccd1e3"
+  },
+  {
+    "dataset_id": "67f6bf7927d844c81dccd1e1",
+    "chunk_id": null,
+    "question": "What are vector databases and what are some examples?",
+    "answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings representing semantic information.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.",
+    "llm_id": "llm_1",
+    "_id": "67f6bf8327d844c81dccd1e4"
+  },
+  {
+    "dataset_id": "67f6bf7927d844c81dccd1e1",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) to assess document retrieval and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.",
+    "llm_id": "llm_1",
+    "_id": "67f6bf8327d844c81dccd1e5"
+  },
+  {
+    "dataset_id": "67f6bf7927d844c81dccd1e1",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "A valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID is required.",
+    "llm_id": "llm_1",
+    "_id": "67f6bf8327d844c81dccd1e6"
+  },
+  {
+    "dataset_id": "67f6bf7927d844c81dccd1e1",
+    "chunk_id": null,
+    "question": "What are the minimum income requirements for salaried individuals applying for a personal loan?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000.",
+    "llm_id": "llm_1",
+    "_id": "67f6bf8327d844c81dccd1e7"
+  },
+  {
+    "dataset_id": "67f6bf7927d844c81dccd1e1",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM dispute resolution?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f6bf8327d844c81dccd1e8"
+  },
+  {
+    "dataset_id": "67f6c14b381efe8a2bd8b31d",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG enhances large language models by grounding their responses in external, up-to-date knowledge sources, retrieved by a dedicated component, leading to more accurate and informative outputs.",
+    "llm_id": "llm_1",
+    "_id": "67f6c156381efe8a2bd8b31f"
+  },
+  {
+    "dataset_id": "67f6c14b381efe8a2bd8b31d",
+    "chunk_id": null,
+    "question": "What are vector databases and what types of data do they handle?",
+    "answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings representing semantic information about text, images, or other data.  They use these embeddings to capture meaning and relationships between data points.",
+    "llm_id": "llm_1",
+    "_id": "67f6c156381efe8a2bd8b320"
+  },
+  {
+    "dataset_id": "67f6c14b381efe8a2bd8b31d",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) assessing document retrieval effectiveness, and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) evaluating generated text quality.  Additionally, RAG-specific metrics like faithfulness and relevance are employed to measure how well the generated response utilizes retrieved information and addresses the query.",
+    "llm_id": "llm_1",
+    "_id": "67f6c156381efe8a2bd8b321"
+  },
+  {
+    "dataset_id": "67f6c14b381efe8a2bd8b31d",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "A valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID is required.",
+    "llm_id": "llm_1",
+    "_id": "67f6c156381efe8a2bd8b322"
+  },
+  {
+    "dataset_id": "67f6c14b381efe8a2bd8b31d",
+    "chunk_id": null,
+    "question": "What are the minimum income requirements for a salaried individual to be eligible for a personal loan?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000.",
+    "llm_id": "llm_1",
+    "_id": "67f6c156381efe8a2bd8b323"
+  },
+  {
+    "dataset_id": "67f6c14b381efe8a2bd8b31d",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM transaction disputes?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f6c156381efe8a2bd8b324"
+  },
+  {
+    "dataset_id": "67f7cb4aaec2bd999841e32e",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thus addressing limitations and producing more accurate and informative responses.",
+    "llm_id": "llm_1",
+    "_id": "67f7cb5aaec2bd999841e330"
+  },
+  {
+    "dataset_id": "67f7cb4aaec2bd999841e32e",
+    "chunk_id": null,
+    "question": "What are vector databases and what types of data do they handle?",
+    "answer": "Vector databases are specialized systems that store and efficiently query high-dimensional vector embeddings representing semantic information from text, images, or other data types in a numerical format.",
+    "llm_id": "llm_1",
+    "_id": "67f7cb5aaec2bd999841e331"
+  },
+  {
+    "dataset_id": "67f7cb4aaec2bd999841e32e",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (like precision, recall, and MRR) to assess document retrieval, generation-focused metrics (like BLEU, ROUGE, and METEOR) to assess generated text quality, and RAG-specific metrics (like faithfulness and relevance) to assess how well the generated response uses retrieved information and addresses the query.",
+    "llm_id": "llm_1",
+    "_id": "67f7cb5aaec2bd999841e332"
+  },
+  {
+    "dataset_id": "67f7cb4aaec2bd999841e32e",
+    "chunk_id": null,
+    "question": "What steps are necessary to open a savings account according to this Standard Operating Procedure?",
+    "answer": "The steps include Customer Identification (collecting and verifying a valid government-issued ID), KYC Compliance (filling and verifying the KYC form), Customer Due Diligence (performing normal or enhanced due diligence based on risk), Account Creation (entering details in the CBS and assigning a Customer ID), and Welcome Kit & Activation (providing account materials and activating the account upon initial deposit).",
+    "llm_id": "llm_1",
+    "_id": "67f7cb5aaec2bd999841e333"
+  },
+  {
+    "dataset_id": "67f7cb4aaec2bd999841e32e",
+    "chunk_id": null,
+    "question": "What are the minimum income and age requirements for a personal loan according to these guidelines?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000 and be between 21 and 60 years old.",
+    "llm_id": "llm_1",
+    "_id": "67f7cb5aaec2bd999841e334"
+  },
+  {
+    "dataset_id": "67f7cb4aaec2bd999841e32e",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM transaction disputes?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7cb5aaec2bd999841e335"
+  },
+  {
+    "dataset_id": "67f7cb9db89cdba9c45398db",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, addressing limitations by using a retrieval component to fetch relevant information before generating a response.",
+    "llm_id": "llm_1",
+    "_id": "67f7cbabb89cdba9c45398dd"
+  },
+  {
+    "dataset_id": "67f7cb9db89cdba9c45398db",
+    "chunk_id": null,
+    "question": "What are vector databases and what are some examples?",
+    "answer": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings, representing semantic information numerically.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.",
+    "llm_id": "llm_1",
+    "_id": "67f7cbabb89cdba9c45398de"
+  },
+  {
+    "dataset_id": "67f7cb9db89cdba9c45398db",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (precision, recall, MRR) to assess document retrieval and generation-focused metrics (BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used to measure how well the generated response utilizes retrieved information and addresses the query.",
+    "llm_id": "llm_1",
+    "_id": "67f7cbabb89cdba9c45398df"
+  },
+  {
+    "dataset_id": "67f7cb9db89cdba9c45398db",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "Valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and address proof are required.",
+    "llm_id": "llm_1",
+    "_id": "67f7cbabb89cdba9c45398e0"
+  },
+  {
+    "dataset_id": "67f7cb9db89cdba9c45398db",
+    "chunk_id": null,
+    "question": "What are the minimum income and age requirements for a personal loan applicant?",
+    "answer": "The minimum monthly income requirement is \u20b925,000, and the applicant must be between 21 and 60 years old.",
+    "llm_id": "llm_1",
+    "_id": "67f7cbabb89cdba9c45398e1"
+  },
+  {
+    "dataset_id": "67f7cb9db89cdba9c45398db",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM transaction disputes?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7cbabb89cdba9c45398e2"
+  },
+  {
+    "dataset_id": "67f7cd39825acfaf9bd1afe5",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thus addressing the limitations of relying solely on the model's internal knowledge.  This is achieved by first retrieving relevant information from a knowledge base and then using that information to generate a response.",
+    "llm_id": "llm_1",
+    "_id": "67f7cd48825acfaf9bd1afe7"
+  },
+  {
+    "dataset_id": "67f7cd39825acfaf9bd1afe5",
+    "chunk_id": null,
+    "question": "What are vector databases and what are some examples?",
+    "answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings representing semantic information.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.",
+    "llm_id": "llm_1",
+    "_id": "67f7cd48825acfaf9bd1afe8"
+  },
+  {
+    "dataset_id": "67f7cd39825acfaf9bd1afe5",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) which assess document retrieval, and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) which assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used to measure how well the generated response uses retrieved information and addresses the query.",
+    "llm_id": "llm_1",
+    "_id": "67f7cd48825acfaf9bd1afe9"
+  },
+  {
+    "dataset_id": "67f7cd39825acfaf9bd1afe5",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "A valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID is required.",
+    "llm_id": "llm_1",
+    "_id": "67f7cd48825acfaf9bd1afea"
+  },
+  {
+    "dataset_id": "67f7cd39825acfaf9bd1afe5",
+    "chunk_id": null,
+    "question": "What are the minimum eligibility requirements for a personal loan under these guidelines?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000, be between 21 and 60 years old, and have a credit score above 700.",
+    "llm_id": "llm_1",
+    "_id": "67f7cd48825acfaf9bd1afeb"
+  },
+  {
+    "dataset_id": "67f7cd39825acfaf9bd1afe5",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM transaction disputes?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7cd48825acfaf9bd1afec"
+  },
+  {
+    "dataset_id": "67f7dad3978885036496952a",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thus addressing limitations and producing more accurate and informative responses.",
+    "llm_id": "llm_1",
+    "_id": "67f7dae2978885036496952c"
+  },
+  {
+    "dataset_id": "67f7dad3978885036496952a",
+    "chunk_id": null,
+    "question": "What are vector databases and what are some examples?",
+    "answer": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings representing semantic information.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.",
+    "llm_id": "llm_1",
+    "_id": "67f7dae2978885036496952d"
+  },
+  {
+    "dataset_id": "67f7dad3978885036496952a",
+    "chunk_id": null,
+    "question": "What types of evaluation metrics are used for Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) to assess document retrieval and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.",
+    "llm_id": "llm_1",
+    "_id": "67f7dae2978885036496952e"
+  },
+  {
+    "dataset_id": "67f7dad3978885036496952a",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "Valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID are required, along with address proof.",
+    "llm_id": "llm_1",
+    "_id": "67f7dae2978885036496952f"
+  },
+  {
+    "dataset_id": "67f7dad3978885036496952a",
+    "chunk_id": null,
+    "question": "What are the minimum income requirements for salaried individuals applying for a personal loan?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000.",
+    "llm_id": "llm_1",
+    "_id": "67f7dae29788850364969530"
+  },
+  {
+    "dataset_id": "67f7dad3978885036496952a",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM transaction disputes?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7dae29788850364969531"
+  },
+  {
+    "dataset_id": "67f7dbd12c4b6ac259dffd74",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, which addresses limitations in accuracy and information access.",
+    "llm_id": "llm_1",
+    "_id": "67f7dbe12c4b6ac259dffd76"
+  },
+  {
+    "dataset_id": "67f7dbd12c4b6ac259dffd74",
+    "chunk_id": null,
+    "question": "What are vector databases and what types of data do they handle?",
+    "answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings representing semantic information about text, images, or other data.  They capture the meaning and relationships of this data in a numerical format.",
+    "llm_id": "llm_1",
+    "_id": "67f7dbe12c4b6ac259dffd77"
+  },
+  {
+    "dataset_id": "67f7dbd12c4b6ac259dffd74",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) to assess document retrieval and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.",
+    "llm_id": "llm_1",
+    "_id": "67f7dbe12c4b6ac259dffd78"
+  },
+  {
+    "dataset_id": "67f7dbd12c4b6ac259dffd74",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "A valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID is required.",
+    "llm_id": "llm_1",
+    "_id": "67f7dbe12c4b6ac259dffd79"
+  },
+  {
+    "dataset_id": "67f7dbd12c4b6ac259dffd74",
+    "chunk_id": null,
+    "question": "What are the minimum income and age requirements for a personal loan under these guidelines?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000 and be between 21 and 60 years old.",
+    "llm_id": "llm_1",
+    "_id": "67f7dbe12c4b6ac259dffd7a"
+  },
+  {
+    "dataset_id": "67f7dbd12c4b6ac259dffd74",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM dispute resolution?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7dbe12c4b6ac259dffd7b"
+  },
+  {
+    "dataset_id": "67f7ddc23124a31747f0dbcc",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, retrieved by a retrieval component before a generative model produces a response, leading to more accurate and informative outputs.",
+    "llm_id": "llm_1",
+    "_id": "67f7ddd03124a31747f0dbce"
+  },
+  {
+    "dataset_id": "67f7ddc23124a31747f0dbcc",
+    "chunk_id": null,
+    "question": "What are vector databases and what are some examples?",
+    "answer": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings, representing semantic information in numerical format.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.",
+    "llm_id": "llm_1",
+    "_id": "67f7ddd03124a31747f0dbcf"
+  },
+  {
+    "dataset_id": "67f7ddc23124a31747f0dbcc",
+    "chunk_id": null,
+    "question": "What types of evaluation metrics are used for Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems use retrieval-focused metrics (like precision, recall, and MRR) to assess document retrieval and generation-focused metrics (like BLEU, ROUGE, and METEOR) to evaluate the generated text quality.  Additionally, RAG-specific metrics such as faithfulness and relevance are used.",
+    "llm_id": "llm_1",
+    "_id": "67f7ddd03124a31747f0dbd0"
+  },
+  {
+    "dataset_id": "67f7ddc23124a31747f0dbcc",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "A valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID is required.",
+    "llm_id": "llm_1",
+    "_id": "67f7ddd03124a31747f0dbd1"
+  },
+  {
+    "dataset_id": "67f7ddc23124a31747f0dbcc",
+    "chunk_id": null,
+    "question": "What are the minimum income and age requirements for a personal loan applicant?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000 and be between 21 and 60 years old.",
+    "llm_id": "llm_1",
+    "_id": "67f7ddd03124a31747f0dbd2"
+  },
+  {
+    "dataset_id": "67f7ddc23124a31747f0dbcc",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM transaction disputes?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7ddd03124a31747f0dbd3"
+  },
+  {
+    "dataset_id": "67f7de992004fdec43a1ecd9",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thus addressing limitations and producing more accurate and informative responses.",
+    "llm_id": "llm_1",
+    "_id": "67f7dea72004fdec43a1ecdb"
+  },
+  {
+    "dataset_id": "67f7de992004fdec43a1ecd9",
+    "chunk_id": null,
+    "question": "What are vector databases and what types of data do they handle?",
+    "answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings representing the semantic information of text, images, or other data types in a numerical format.",
+    "llm_id": "llm_1",
+    "_id": "67f7dea72004fdec43a1ecdc"
+  },
+  {
+    "dataset_id": "67f7de992004fdec43a1ecd9",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (like precision, recall, and MRR) which assess document retrieval, and generation-focused metrics (like BLEU, ROUGE, and METEOR) which assess the quality of the generated text.  Additionally, RAG-specific metrics such as faithfulness and relevance are used.",
+    "llm_id": "llm_1",
+    "_id": "67f7dea72004fdec43a1ecdd"
+  },
+  {
+    "dataset_id": "67f7de992004fdec43a1ecd9",
+    "chunk_id": null,
+    "question": "What are the steps involved in opening a savings account according to this Standard Operating Procedure?",
+    "answer": "The steps are Customer Identification (collecting and verifying ID), KYC Compliance (filling and verifying the KYC form), Customer Due Diligence (normal or enhanced depending on risk), Account Creation (entering details in the CBS and assigning a Customer ID), and Welcome Kit & Activation (providing account materials and activating the account upon initial deposit).",
+    "llm_id": "llm_1",
+    "_id": "67f7dea72004fdec43a1ecde"
+  },
+  {
+    "dataset_id": "67f7de992004fdec43a1ecd9",
+    "chunk_id": null,
+    "question": "What are the minimum income requirements for salaried individuals applying for a personal loan?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000.",
+    "llm_id": "llm_1",
+    "_id": "67f7dea72004fdec43a1ecdf"
+  },
+  {
+    "dataset_id": "67f7de992004fdec43a1ecd9",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM dispute resolution?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7dea72004fdec43a1ece0"
+  },
+  {
+    "dataset_id": "67f7dfb932418488f2d50227",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, addressing limitations by using a retrieval component to fetch relevant information before generation.",
+    "llm_id": "llm_1",
+    "_id": "67f7dfc832418488f2d50229"
+  },
+  {
+    "dataset_id": "67f7dfb932418488f2d50227",
+    "chunk_id": null,
+    "question": "What are vector databases and what are some examples?",
+    "answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings representing semantic information.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.",
+    "llm_id": "llm_1",
+    "_id": "67f7dfc832418488f2d5022a"
+  },
+  {
+    "dataset_id": "67f7dfb932418488f2d50227",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems, and what aspects of the system do they assess?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (precision, recall, MRR) which assess the relevance of retrieved documents, and generation-focused metrics (BLEU, ROUGE, METEOR) which evaluate the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance measure how well the generated response uses the retrieved information and answers the query.",
+    "llm_id": "llm_1",
+    "_id": "67f7dfc832418488f2d5022b"
+  },
+  {
+    "dataset_id": "67f7dfb932418488f2d50227",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "Valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID are required.",
+    "llm_id": "llm_1",
+    "_id": "67f7dfc832418488f2d5022c"
+  },
+  {
+    "dataset_id": "67f7dfb932418488f2d50227",
+    "chunk_id": null,
+    "question": "What are the eligibility requirements for a personal loan under these guidelines?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000, be between 21 and 60 years old, and have a credit score above 700.",
+    "llm_id": "llm_1",
+    "_id": "67f7dfc832418488f2d5022d"
+  },
+  {
+    "dataset_id": "67f7dfb932418488f2d50227",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM transaction disputes?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7dfc832418488f2d5022e"
+  },
+  {
+    "dataset_id": "67f7e14030c10de47a0034a8",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thus addressing limitations and producing more accurate and informative responses.",
+    "llm_id": "llm_1",
+    "_id": "67f7e14f30c10de47a0034aa"
+  },
+  {
+    "dataset_id": "67f7e14030c10de47a0034a8",
+    "chunk_id": null,
+    "question": "What are vector databases and what types of data do they handle?",
+    "answer": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings representing semantic information about text, images, or other data.  They use these numerical representations to capture meaning and relationships between data points.",
+    "llm_id": "llm_1",
+    "_id": "67f7e14f30c10de47a0034ab"
+  },
+  {
+    "dataset_id": "67f7e14030c10de47a0034a8",
+    "chunk_id": null,
+    "question": "What types of evaluation metrics are used for Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems use retrieval-focused metrics (precision, recall, MRR) to assess document retrieval and generation-focused metrics (BLEU, ROUGE, METEOR) to evaluate the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used to measure how well the generated response utilizes retrieved information and addresses the query.",
+    "llm_id": "llm_1",
+    "_id": "67f7e14f30c10de47a0034ac"
+  },
+  {
+    "dataset_id": "67f7e14030c10de47a0034a8",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "Valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and address proof are required.",
+    "llm_id": "llm_1",
+    "_id": "67f7e14f30c10de47a0034ad"
+  },
+  {
+    "dataset_id": "67f7e14030c10de47a0034a8",
+    "chunk_id": null,
+    "question": "What are the minimum income requirements and age limits for salaried individuals applying for a personal loan?",
+    "answer": "Salaried individuals must have a minimum monthly income of \u20b925,000 and be between 21 and 60 years old.",
+    "llm_id": "llm_1",
+    "_id": "67f7e14f30c10de47a0034ae"
+  },
+  {
+    "dataset_id": "67f7e14030c10de47a0034a8",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM transaction disputes?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7e14f30c10de47a0034af"
+  },
+  {
+    "dataset_id": "67f7e5b8aba52edbe1e1d3ce",
+    "chunk_id": null,
+    "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+    "answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thus addressing limitations and producing more accurate and informative responses.",
+    "llm_id": "llm_1",
+    "_id": "67f7e5c9aba52edbe1e1d3d0"
+  },
+  {
+    "dataset_id": "67f7e5b8aba52edbe1e1d3ce",
+    "chunk_id": null,
+    "question": "What are vector databases and what are some examples?",
+    "answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings, representing semantic information numerically.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.",
+    "llm_id": "llm_1",
+    "_id": "67f7e5c9aba52edbe1e1d3d1"
+  },
+  {
+    "dataset_id": "67f7e5b8aba52edbe1e1d3ce",
+    "chunk_id": null,
+    "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+    "answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) which assess document retrieval, and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) which assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.",
+    "llm_id": "llm_1",
+    "_id": "67f7e5c9aba52edbe1e1d3d2"
+  },
+  {
+    "dataset_id": "67f7e5b8aba52edbe1e1d3ce",
+    "chunk_id": null,
+    "question": "What documents are required for customer identification when opening a savings account?",
+    "answer": "Valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID.",
+    "llm_id": "llm_1",
+    "_id": "67f7e5c9aba52edbe1e1d3d3"
+  },
+  {
+    "dataset_id": "67f7e5b8aba52edbe1e1d3ce",
+    "chunk_id": null,
+    "question": "What are the minimum eligibility requirements for a personal loan under these guidelines?",
+    "answer": "A minimum monthly income of \u20b925,000, age between 21 and 60 years, and a credit score above 700.",
+    "llm_id": "llm_1",
+    "_id": "67f7e5c9aba52edbe1e1d3d4"
+  },
+  {
+    "dataset_id": "67f7e5b8aba52edbe1e1d3ce",
+    "chunk_id": null,
+    "question": "What is the resolution timeline for ATM transaction disputes?",
+    "answer": "Disputes must be resolved within 7 working days.",
+    "llm_id": "llm_1",
+    "_id": "67f7e5c9aba52edbe1e1d3d5"
+  }
+]

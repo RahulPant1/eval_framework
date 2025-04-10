@@ -1,0 +1,13 @@
+[
+  {
+    "store_name": "Chroma",
+    "store_type": "Vector Database",
+    "collection_name": "eval_docs",
+    "connection_details": {
+      "persist_directory": "./chroma_db",
+      "client_settings": {},
+      "embedding_model": "all-MiniLM-L6-v2"
+    },
+    "_id": "67f6bac2ce615e7381dd9b47"
+  }
+]

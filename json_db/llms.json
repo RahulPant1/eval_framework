@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "llm_1",
+    "llm_name": "Gemini 1.5 Flash",
+    "llm_description": "Google's Gemini 1.5 Flash",
+    "llm_provider": "Google"
+  },
+  {
+    "_id": "llm_2",
+    "llm_name": "Llama 2",
+    "llm_description": "Meta's Llama 2",
+    "llm_provider": "Meta"
+  }
+]

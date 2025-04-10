@@ -19,6 +19,12 @@ from datetime import datetime
 # Download required NLTK resources
 try:
     nltk.download('punkt', quiet=True)
+    nltk.download('wordnet', quiet=True)
+    nltk.download('omw-1.4', quiet=True)  # Open Multilingual WordNet
+    # Download additional resources needed for METEOR
+    nltk.download('averaged_perceptron_tagger', quiet=True)
+    nltk.download('universal_tagset', quiet=True)
+    nltk.download('stopwords', quiet=True)
 except Exception as e:
     logging.warning(f"Error downloading NLTK resources: {e}")
 
@@ -182,7 +188,7 @@ def run_evaluation_harness(db, test_suite_id, llm_name: str) -> Dict[str, Any]:
     Main evaluation pipeline that runs tests for a given test suite.
     
     Args:
-        db: MongoDB database object
+        db: Database object (MongoDB or JSON)
         test_suite_id: ID of the test suite to run
         llm_name: Name of the LLM to use
         
@@ -190,8 +196,17 @@ def run_evaluation_harness(db, test_suite_id, llm_name: str) -> Dict[str, Any]:
         Dictionary with evaluation results
     """
     try:
-        # Get test suite
-        test_suite = db.test_suites.find_one({"_id": test_suite_id})
+        # Get test suite - handle both MongoDB ObjectId and string IDs
+        try:
+            from bson.objectid import ObjectId
+            # Check if we're using JSON database (has 'json_db_path' in config)
+            if hasattr(db, 'db_path') or 'json_db_path' in getattr(db, 'config', {}):
+                test_suite = db.test_suites.find_one({"_id": test_suite_id})
+            else:
+                test_suite = db.test_suites.find_one({"_id": ObjectId(test_suite_id)})
+        except:
+            test_suite = db.test_suites.find_one({"_id": test_suite_id})
+            
         if not test_suite:
             raise ValueError(f"Test suite with ID {test_suite_id} not found")
             
@@ -272,7 +287,13 @@ def run_evaluation_harness(db, test_suite_id, llm_name: str) -> Dict[str, Any]:
             "results": results
         }
         
+        # Handle both MongoDB and JSON database insert operations
         evaluation_run_id = db.evaluation_runs.insert_one(evaluation_run).inserted_id
+        # For JSON database, IDs are already strings
+        if hasattr(db, 'db_path') or 'json_db_path' in getattr(db, 'config', {}):
+            pass
+        elif isinstance(evaluation_run_id, ObjectId):
+            evaluation_run_id = str(evaluation_run_id)
         
         # Store individual test results in test_results collection
         for i, result in enumerate(results):
@@ -286,12 +307,12 @@ def run_evaluation_harness(db, test_suite_id, llm_name: str) -> Dict[str, Any]:
                 "explanation": result["explanation"],
                 "timestamp": datetime.now()
             }
-            db.test_results.insert_one(test_result)
+            test_result_id = db.test_results.insert_one(test_result).inserted_id
             
             # Store metrics in metrics collection
             metrics_entry = {
                 "evaluation_run_id": evaluation_run_id,
-                "test_result_id": test_result["_id"],
+                "test_result_id": test_result_id,
                 "metrics": result["metrics"],
                 "timestamp": datetime.now()
             }
@@ -338,7 +359,19 @@ def run_evaluation_harness(db, test_suite_id, llm_name: str) -> Dict[str, Any]:
         }
     except Exception as e:
         logging.error(f"Error running evaluation harness: {e}")
-        return {"error": str(e)}
+        return {
+            "run_id": evaluation_run_id if 'evaluation_run_id' in locals() else None,
+            "test_suite_id": test_suite_id,
+            "llm_name": llm_name,
+            "num_tests": 0,
+            "success_rate": 0,
+            "average_metrics": {
+                "bleu": 0,
+                "rouge-1-f1": 0,
+                "meteor": 0
+            },
+            "error": str(e)
+        }
 
 
 def generate_metrics_report(db, evaluation_run_id, output_format="json", output_dir="reports"):

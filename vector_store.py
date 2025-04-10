@@ -14,6 +14,8 @@ import chromadb
 from chromadb.config import Settings
 from chromadb.errors import ChromaError
 from database import connect_to_mongodb
+# Import the BaseDatabase type for type hints
+from database_adapter import BaseDatabase
 
 class VectorStore:
     """
@@ -23,22 +25,37 @@ class VectorStore:
     def __init__(self):
         """
         Initialize vector store with embedding model and ChromaDB local store.
-        Configuration is fetched from MongoDB vector_store collection.
+        Configuration is fetched from database (MongoDB or JSON files).
         """
-        # Get configuration from MongoDB
+        # Get configuration from database (MongoDB or JSON files)
         db = connect_to_mongodb()
-        vector_store_config = db.vector_store.find_one()
+        vector_store_config = db.find_one("vector_store")
         
+        # If vector store config is not found, create a default configuration
+        # This handles the case when using JSON database fallback
         if not vector_store_config:
-            raise RuntimeError("Vector store configuration not found in MongoDB")
+            logging.info("Vector store configuration not found. Creating default configuration.")
+            vector_store_config = {
+                "store_name": "Chroma",
+                "store_type": "Vector Database",
+                "collection_name": "eval_docs",
+                "connection_details": {
+                    "persist_directory": "./chroma_db",
+                    "client_settings": {},
+                    "embedding_model": "all-MiniLM-L6-v2"
+                }
+            }
+            # Insert the default configuration into the database
+            db.insert_one("vector_store", vector_store_config)
             
         # Extract configuration
         connection_details = vector_store_config.get('connection_details', {})
         persist_directory = connection_details.get('persist_directory')
         if not persist_directory:
             persist_directory = './chroma_db'  # Default directory if not specified
-            # Update MongoDB with default directory
-            db.vector_store.update_one(
+            # Update database with default directory
+            db.update_one(
+                "vector_store",
                 {"_id": vector_store_config["_id"]},
                 {"$set": {"connection_details.persist_directory": persist_directory}}
             )
@@ -147,10 +164,17 @@ class VectorStore:
         """
         try:
             if self.collection is not None:
-                # Get collection name from MongoDB config
+                # Get collection name from database config
                 db = connect_to_mongodb()
-                vector_store_config = db.vector_store.find_one()
-                collection_name = vector_store_config.get('collection_name', 'eval_docs')
+                # Get vector store config from the collection
+                vector_store_config = db.vector_store.find_one({})
+                
+                # If vector store config is not found, use default collection name
+                if not vector_store_config:
+                    collection_name = 'eval_docs'
+                    logging.info("Using default collection name 'eval_docs' for cleanup.")
+                else:
+                    collection_name = vector_store_config.get('collection_name', 'eval_docs')
                 
                 # Delete the entire collection
                 self.client.delete_collection(collection_name)

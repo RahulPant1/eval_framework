@@ -5,6 +5,7 @@
 - MongoDB Running on localhost (sudo systemctl start mongod)
 - Gemini API key (export GEMINI_API_KEY="") for Gemini 1.5 Flash model
 - Disk space for persistent ChromaDB storage
+- JSON database files in `json_db/` directory
 
 ## Execution Flow
 
@@ -64,10 +65,16 @@ Before running the main evaluation, initialize the database using:
 python init_database.py
 ```
 
+or for JSON database:
+
+```bash
+python init_jsondb.py
+```
+
 This script:
-- Creates all required MongoDB collections
+- Creates all required MongoDB collections or JSON files
 - Populates initial reference data
-- Sets up the following collections:
+- Sets up the following collections/files:
   - llms
   - llm_endpoints
   - model_deployments
@@ -89,7 +96,7 @@ db = setup_database()
 ```
 
 This function:
-- Establishes a connection to MongoDB
+- Establishes a connection to MongoDB or loads JSON files
 - Returns the database connection object for use in subsequent operations
 
 ### 3. Dataset Storage and Vector Indexing: `store_dataset()`
@@ -170,12 +177,12 @@ This new function:
 The `VectorStore` class:
 - Uses SentenceTransformer to generate embeddings
 - **Stores embeddings in persistent ChromaDB**
-  - Configuration managed through MongoDB vector_store collection
+  - Configuration managed through MongoDB vector_store collection or JSON files
   - Persistent storage in configurable directory (default: `./chroma_db/`)
-  - Collection name and other settings fetched from database
+  - Collection name and other settings fetched from database or JSON
 - Provides similarity search functionality with k-nearest neighbors (kNN)
 - **Implements robust error handling and retries for ChromaDB operations**
-- Supports dynamic configuration updates through MongoDB
+- Supports dynamic configuration updates through MongoDB or JSON
 
 ### LLM Handlers (llm_handlers.py)
 

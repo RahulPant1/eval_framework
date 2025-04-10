@@ -1,0 +1,7 @@
+[
+  {
+    "template_type": "qa_generation",
+    "template_content": "Generate {num_questions} question-answer pairs from the following text. Format each pair as 'Question: <question>\nAnswer: <answer>'\n\nText: {context}",
+    "_id": "67f6bac7ce615e7381dd9b48"
+  }
+]

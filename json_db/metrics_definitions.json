@@ -1,0 +1,26 @@
+[
+  {
+    "metric_name": "bleu",
+    "metric_description": "BLEU (Bilingual Evaluation Understudy) score for measuring text similarity",
+    "metric_type": "generation",
+    "metric_range": "0-1",
+    "higher_is_better": true,
+    "_id": "67f6c177381efe8a2bd8b339"
+  },
+  {
+    "metric_name": "rouge",
+    "metric_description": "ROUGE (Recall-Oriented Understudy for Gisting Evaluation) for measuring text similarity",
+    "metric_type": "generation",
+    "metric_range": "0-1",
+    "higher_is_better": true,
+    "_id": "67f6c177381efe8a2bd8b33a"
+  },
+  {
+    "metric_name": "meteor",
+    "metric_description": "METEOR (Metric for Evaluation of Translation with Explicit ORdering) for semantic similarity",
+    "metric_type": "generation",
+    "metric_range": "0-1",
+    "higher_is_better": true,
+    "_id": "67f6c177381efe8a2bd8b33b"
+  }
+]

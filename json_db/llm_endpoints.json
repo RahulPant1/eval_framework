@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "endpoint_1",
+    "llm_id": "llm_1",
+    "endpoint_url": "https://ai.googleapis.com/v1beta1/models/gemini-1.5-flash:generateContent",
+    "endpoint_type": "REST API"
+  },
+  {
+    "_id": "endpoint_2",
+    "llm_id": "llm_2",
+    "endpoint_url": "http://localhost:8080/completions",
+    "endpoint_type": "REST API"
+  }
+]

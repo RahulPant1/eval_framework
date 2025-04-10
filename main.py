@@ -14,6 +14,7 @@ import os
 import logging
 import argparse
 from database import connect_to_mongodb
+from database_adapter import BaseDatabase  # Import the BaseDatabase type for type hints
 from vector_store import VectorStore
 from llm_handlers import get_llm_handler
 from evaluation import run_evaluation_harness, generate_rag_response, generate_metrics_report
@@ -158,8 +159,22 @@ def run_evaluation(db, test_suite_id, llm_name="Gemini 1.5 Flash"):
     try:
         # Run evaluation harness
         results = run_evaluation_harness(db, test_suite_id, llm_name)
-        logger.info(f"Evaluation completed with {len(results)} results")
-        return results
+        
+        # Check if results is a dictionary (expected format) or a list (possible format when using JSON DB)
+        if isinstance(results, list):
+            logger.info(f"Evaluation completed with {len(results)} results")
+            # Convert list results to the expected dictionary format
+            return {
+                "run_id": None,  # This might be None when using JSON DB
+                "test_suite_id": test_suite_id,
+                "llm_name": llm_name,
+                "num_tests": len(results),
+                "success_rate": sum(1 for r in results if r.get("success", False)) / len(results) if results else 0
+            }
+        else:
+            # Standard dictionary format
+            logger.info(f"Evaluation completed with {results.get('num_tests', 0)} results")
+            return results
     except Exception as e:
         logger.error(f"Error running evaluation: {e}")
         raise
@@ -219,6 +234,12 @@ def main():
         # Run evaluation
         results = run_evaluation(db, test_suite_id, args.llm)
         
+        # Check if results contain run_id
+        if "run_id" not in results or results["run_id"] is None:
+            logger.error("Evaluation failed: No run_id in results")
+            print("\nError: Evaluation failed to generate results")
+            return
+            
         # Generate metrics report
         report_path = generate_metrics_report(db, results["run_id"], output_format="html")
         

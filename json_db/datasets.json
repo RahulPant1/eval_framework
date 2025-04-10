@@ -1,0 +1,427 @@
+[
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\u009660 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f6b931e240e205113ea94e"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\u009660 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f6b9b246ebcdc279f7af4b"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\u009660 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f6bac2ce615e7381dd9b45"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f6bd03e47f3c32d8be8dde"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f6bf7927d844c81dccd1e1"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f6c0619abbadfca532f464"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f6c14b381efe8a2bd8b31d"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7cb4aaec2bd999841e32e"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7cb9db89cdba9c45398db"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7cd39825acfaf9bd1afe5"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7dad3978885036496952a"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7dbd12c4b6ac259dffd74"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7ddc23124a31747f0dbcc"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7de992004fdec43a1ecd9"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7dfb932418488f2d50227"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7e14030c10de47a0034a8"
+  },
+  {
+    "dataset_name": "sample_data.csv",
+    "dataset_description": "Dataset loaded from CSV",
+    "chunks": [
+      {
+        "chunk_content": "The Retrieval-Augmented Generation (RAG) approach combines the strengths of retrieval-based and generation-based methods for natural language processing tasks. In RAG, a retrieval component first fetches relevant documents or passages from a knowledge base, and then a generative model uses this retrieved information to produce more accurate and informative responses. This approach helps address the limitations of large language models by grounding their generations in external, up-to-date knowledge sources."
+      },
+      {
+        "chunk_content": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings. These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships. Popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB. They typically support similarity search operations like k-nearest neighbors (kNN) to find the most similar vectors to a query vector."
+      },
+      {
+        "chunk_content": "Evaluation metrics for RAG systems include both retrieval-focused metrics and generation-focused metrics. Retrieval metrics like precision, recall, and mean reciprocal rank (MRR) assess how well the system retrieves relevant documents. Generation metrics like BLEU, ROUGE, and METEOR evaluate the quality of the generated text by comparing it to reference answers. Additionally, RAG-specific metrics such as faithfulness and relevance help measure how well the generated response uses the retrieved information and addresses the original query."
+      },
+      {
+        "chunk_content": "Document Title: Standard Operating Procedure for Opening a Savings Account\nTo open a savings account, follow the steps below:\nCustomer Identification: Collect valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID). Verify against the name and address proof provided.\nKYC Compliance: Ensure Know Your Customer (KYC) form is filled. Cross-check against the Central KYC Registry.\nCustomer Due Diligence:\nFor low-risk customers: proceed with normal due diligence.\nFor high-risk customers (e.g., politically exposed persons), escalate to Compliance for enhanced due diligence.\nAccount Creation: Enter details in the Core Banking System (CBS) and assign a unique Customer ID.\nWelcome Kit & Activation: Provide account number, cheque book, debit card (if opted), and mobile banking setup. Account becomes active once the initial deposit is made."
+      },
+      {
+        "chunk_content": "Document Title: Personal Loan Disbursement Guidelines (Retail Banking Division)\n\nEligibility Check:\n\nSalaried individuals must have a minimum monthly income of ?25,000.\n\nAge limit: 21\ufffd60 years.\n\nCredit score must be above 700.\n\nDocument Collection:\n\nIncome proof (salary slips or ITR for 2 years)\n\nAddress proof\n\nIdentity proof\n\nBank statements (last 6 months)\n\nLoan Sanctioning:\n\nBased on risk profile, tenure, and repayment capacity.\n\nUse the internal Loan Management System (LMS) to evaluate and approve.\n\nDisbursement:\n\nPost-approval, the loan amount is transferred to the applicant's bank account.\n\nDisbursement letter and repayment schedule are issued.\n\nECS mandate is activated for EMI deductions."
+      },
+      {
+        "chunk_content": "Document Title: Procedure for Handling ATM Disputes (Customer Service Manual)\n\nIn case of a failed ATM transaction (e.g., cash not dispensed but amount debited), follow this resolution process:\n\nComplaint Lodgment:\n\nCustomer can register a dispute via branch, call center, or mobile app.\n\nObtain transaction details: date, time, ATM ID, amount.\n\nInitial Acknowledgment:\n\nSend a complaint receipt SMS/email to the customer within 2 hours.\n\nInvestigation:\n\nCheck ATM logs and switch data.\n\nIf the cash was not dispensed, raise a chargeback request with the card network (Visa/Mastercard/RuPay).\n\nResolution Timeline:\n\nDisputes must be resolved within 7 working days.\n\nRefund must be credited to the customer's account if found valid.\n\nCustomer Notification:\n\nInform customer of the outcome via SMS/email.\n\nProvide a reference number for future correspondence."
+      }
+    ],
+    "_id": "67f7e5b8aba52edbe1e1d3ce"
+  }
+]

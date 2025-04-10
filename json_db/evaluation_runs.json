@@ -1,0 +1,762 @@
+[
+  {
+    "test_suite_id": "67f6bd0de47f3c32d8be8de6",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 00:02:11.213967",
+    "results": [
+      {
+        "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+        "expected_answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, addressing limitations by using a retrieval component to fetch relevant documents before generating a response.",
+        "rag_response": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the model's internal knowledge (which may be outdated or incomplete), RAG first retrieves relevant information from a knowledge base, allowing the model to produce more accurate and informative responses.\n",
+        "success": false,
+        "explanation": "Response only contains 67.74% of expected information",
+        "metrics": {
+          "bleu": 0.2918952972702044,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.3829787234042553,
+              "recall": 0.6206896551724138,
+              "f1": 0.4736842058067868
+            },
+            "rouge-2": {
+              "precision": 0.28,
+              "recall": 0.4666666666666667,
+              "f1": 0.34999999531250003
+            },
+            "rouge-l": {
+              "precision": 0.3617021276595745,
+              "recall": 0.5862068965517241,
+              "f1": 0.4473684163331025
+            }
+          },
+          "meteor": 0.5939026251526252
+        }
+      },
+      {
+        "question": "What are vector databases and what types of data do they typically handle?",
+        "expected_answer": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings representing semantic information about text, images, or other data types.  They capture the meaning and relationships within this data in a numerical format.",
+        "rag_response": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings.  These embeddings represent semantic information about text, images, or other data types in a numerical format that captures their meaning and relationships.  They typically handle data that can be converted into vector representations, such as text, images, and other data types where semantic similarity is important.\n",
+        "success": true,
+        "explanation": "Response contains 86.49% of expected information",
+        "metrics": {
+          "bleu": 0.4093797770327016,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.62,
+              "recall": 0.8611111111111112,
+              "f1": 0.7209302276906436
+            },
+            "rouge-2": {
+              "precision": 0.46551724137931033,
+              "recall": 0.7297297297297297,
+              "f1": 0.5684210478759003
+            },
+            "rouge-l": {
+              "precision": 0.58,
+              "recall": 0.8055555555555556,
+              "f1": 0.6744185997836669
+            }
+          },
+          "meteor": 0.8043763154759541
+        }
+      },
+      {
+        "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+        "expected_answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) assessing document retrieval and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) assessing generated text quality, as well as RAG-specific metrics like faithfulness and relevance.",
+        "rag_response": "Evaluation metrics for RAG systems are categorized into retrieval-focused and generation-focused metrics.\n\n**Retrieval-focused metrics** assess the quality of retrieved documents and include precision, recall, and mean reciprocal rank (MRR).\n\n**Generation-focused metrics** evaluate the quality of the generated text and include BLEU, ROUGE, and METEOR.\n\n**RAG-specific metrics** such as faithfulness and relevance measure how well the generated response utilizes the retrieved information and answers the query.\n",
+        "success": true,
+        "explanation": "Response contains 78.12% of expected information",
+        "metrics": {
+          "bleu": 0.10677595123913873,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.3617021276595745,
+              "recall": 0.5666666666666667,
+              "f1": 0.44155843680215895
+            },
+            "rouge-2": {
+              "precision": 0.14754098360655737,
+              "recall": 0.2647058823529412,
+              "f1": 0.18947367961440453
+            },
+            "rouge-l": {
+              "precision": 0.2978723404255319,
+              "recall": 0.4666666666666667,
+              "f1": 0.363636358880081
+            }
+          },
+          "meteor": 0.4786345675994949
+        }
+      },
+      {
+        "question": "What documents are required for customer identification when opening a savings account?",
+        "expected_answer": "Valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and address proof.",
+        "rag_response": "Based on the \"Standard Operating Procedure for Opening a Savings Account\" document, the required documents for customer identification are a valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and a separate document for address proof.  The name and address on both documents are then verified.\n",
+        "success": true,
+        "explanation": "Response contains 100.00% of expected information",
+        "metrics": {
+          "bleu": 0.2763456232090999,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.2972972972972973,
+              "recall": 0.9166666666666666,
+              "f1": 0.44897958813827576
+            },
+            "rouge-2": {
+              "precision": 0.21739130434782608,
+              "recall": 0.9090909090909091,
+              "f1": 0.35087718986765165
+            },
+            "rouge-l": {
+              "precision": 0.2972972972972973,
+              "recall": 0.9166666666666666,
+              "f1": 0.44897958813827576
+            }
+          },
+          "meteor": 0.8211575489862951
+        }
+      },
+      {
+        "question": "What are the minimum income and age requirements for a personal loan applicant under these guidelines?",
+        "expected_answer": "The minimum monthly income is \u20b925,000, and the applicant must be between 21 and 60 years old.",
+        "rag_response": "Based on the provided text, the minimum income requirement for a personal loan applicant is \u20b925,000 per month, and the age requirement is between 21 and 60 years.\n",
+        "success": true,
+        "explanation": "Response contains 76.47% of expected information",
+        "metrics": {
+          "bleu": 0.18882437844970765,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.4166666666666667,
+              "recall": 0.625,
+              "f1": 0.4999999952000001
+            },
+            "rouge-2": {
+              "precision": 0.17857142857142858,
+              "recall": 0.3125,
+              "f1": 0.2272727226446282
+            },
+            "rouge-l": {
+              "precision": 0.375,
+              "recall": 0.5625,
+              "f1": 0.4499999952
+            }
+          },
+          "meteor": 0.7215926670792079
+        }
+      },
+      {
+        "question": "What is the resolution timeline for ATM dispute resolution?",
+        "expected_answer": "Disputes must be resolved within 7 working days.",
+        "rag_response": "Based on the provided text from the \"Procedure for Handling ATM Disputes (Customer Service Manual),\" ATM disputes must be resolved within **7 working days**.\n",
+        "success": true,
+        "explanation": "Response contains 100.00% of expected information",
+        "metrics": {
+          "bleu": 0.1403604669765699,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.2608695652173913,
+              "recall": 0.75,
+              "f1": 0.387096770364204
+            },
+            "rouge-2": {
+              "precision": 0.125,
+              "recall": 0.42857142857142855,
+              "f1": 0.19354838360041626
+            },
+            "rouge-l": {
+              "precision": 0.2608695652173913,
+              "recall": 0.75,
+              "f1": 0.387096770364204
+            }
+          },
+          "meteor": 0.7681159420289855
+        }
+      }
+    ],
+    "_id": "67f6bd2be47f3c32d8be8ded"
+  },
+  {
+    "test_suite_id": "67f6bf8327d844c81dccd1e9",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 00:12:42.710176",
+    "results": [
+      {
+        "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+        "expected_answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, addressing limitations by incorporating relevant information retrieved from a knowledge base before generating a response.",
+        "rag_response": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the knowledge encoded within the model's parameters (which can be outdated or incomplete), RAG augments the model's capabilities by retrieving relevant information from a knowledge base before generating a response. This leads to more accurate and informative outputs.\n",
+        "success": true,
+        "explanation": "Response contains 86.67% of expected information",
+        "metrics": {
+          "bleu": 0.3604692584099503,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.4423076923076923,
+              "recall": 0.8214285714285714,
+              "f1": 0.57499999545
+            },
+            "rouge-2": {
+              "precision": 0.3793103448275862,
+              "recall": 0.7333333333333333,
+              "f1": 0.4999999955061984
+            },
+            "rouge-l": {
+              "precision": 0.4423076923076923,
+              "recall": 0.8214285714285714,
+              "f1": 0.57499999545
+            }
+          },
+          "meteor": 0.8149654715731718
+        }
+      },
+      {
+        "question": "What are vector databases and what are some examples?",
+        "expected_answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings representing semantic information.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.",
+        "rag_response": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings.  These embeddings represent the semantic meaning and relationships of data like text and images in numerical form.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.\n",
+        "success": true,
+        "explanation": "Response contains 87.50% of expected information",
+        "metrics": {
+          "bleu": 0.4695930590103346,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.5555555555555556,
+              "recall": 0.8695652173913043,
+              "f1": 0.6779660969376615
+            },
+            "rouge-2": {
+              "precision": 0.4358974358974359,
+              "recall": 0.7391304347826086,
+              "f1": 0.5483870921071801
+            },
+            "rouge-l": {
+              "precision": 0.5555555555555556,
+              "recall": 0.8695652173913043,
+              "f1": 0.6779660969376615
+            }
+          },
+          "meteor": 0.874664909402261
+        }
+      },
+      {
+        "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+        "expected_answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) to assess document retrieval and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) to assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.",
+        "rag_response": "Evaluation metrics for RAG systems fall into three categories:\n\n1. **Retrieval-focused metrics:** These assess the quality of the retrieved documents, using metrics like precision, recall, and mean reciprocal rank (MRR).\n\n2. **Generation-focused metrics:** These evaluate the quality of the generated text itself, using metrics such as BLEU, ROUGE, and METEOR.\n\n3. **RAG-specific metrics:** These focus on the interaction between retrieval and generation, measuring aspects like faithfulness (how well the generated text reflects the retrieved information) and relevance (how well the generated text addresses the original query).\n",
+        "success": true,
+        "explanation": "Response contains 80.00% of expected information",
+        "metrics": {
+          "bleu": 0.1228854124722356,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.3220338983050847,
+              "recall": 0.5757575757575758,
+              "f1": 0.413043473660208
+            },
+            "rouge-2": {
+              "precision": 0.1780821917808219,
+              "recall": 0.34210526315789475,
+              "f1": 0.23423422973135302
+            },
+            "rouge-l": {
+              "precision": 0.288135593220339,
+              "recall": 0.5151515151515151,
+              "f1": 0.36956521279064275
+            }
+          },
+          "meteor": 0.6164014157628142
+        }
+      },
+      {
+        "question": "What documents are required for customer identification when opening a savings account?",
+        "expected_answer": "A valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID is required.",
+        "rag_response": "Based on the \"Standard Operating Procedure for Opening a Savings Account\" document, the required documents for customer identification are a valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and a name and address proof.\n",
+        "success": true,
+        "explanation": "Response contains 80.00% of expected information",
+        "metrics": {
+          "bleu": 0.23766627182164174,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.25806451612903225,
+              "recall": 0.6153846153846154,
+              "f1": 0.3636363594731405
+            },
+            "rouge-2": {
+              "precision": 0.14285714285714285,
+              "recall": 0.38461538461538464,
+              "f1": 0.2083333293836806
+            },
+            "rouge-l": {
+              "precision": 0.22580645161290322,
+              "recall": 0.5384615384615384,
+              "f1": 0.3181818140185951
+            }
+          },
+          "meteor": 0.7146709816612729
+        }
+      },
+      {
+        "question": "What are the minimum income requirements for salaried individuals applying for a personal loan?",
+        "expected_answer": "Salaried individuals must have a minimum monthly income of \u20b925,000.",
+        "rag_response": "Based on the provided text from \"Personal Loan Disbursement Guidelines (Retail Banking Division),\" the minimum monthly income requirement for salaried individuals applying for a personal loan is \u20b925,000.\n",
+        "success": true,
+        "explanation": "Response contains 72.73% of expected information",
+        "metrics": {
+          "bleu": 0.04117763145596021,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.2222222222222222,
+              "recall": 0.6,
+              "f1": 0.3243243203798393
+            },
+            "rouge-2": {
+              "precision": 0.07142857142857142,
+              "recall": 0.2222222222222222,
+              "f1": 0.10810810442658889
+            },
+            "rouge-l": {
+              "precision": 0.14814814814814814,
+              "recall": 0.4,
+              "f1": 0.21621621227173124
+            }
+          },
+          "meteor": 0.5639097744360901
+        }
+      },
+      {
+        "question": "What is the resolution timeline for ATM dispute resolution?",
+        "expected_answer": "Disputes must be resolved within 7 working days.",
+        "rag_response": "Based on the provided text from the \"Procedure for Handling ATM Disputes (Customer Service Manual),\" ATM disputes must be resolved within **7 working days**.\n",
+        "success": true,
+        "explanation": "Response contains 100.00% of expected information",
+        "metrics": {
+          "bleu": 0.1403604669765699,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.2608695652173913,
+              "recall": 0.75,
+              "f1": 0.387096770364204
+            },
+            "rouge-2": {
+              "precision": 0.125,
+              "recall": 0.42857142857142855,
+              "f1": 0.19354838360041626
+            },
+            "rouge-l": {
+              "precision": 0.2608695652173913,
+              "recall": 0.75,
+              "f1": 0.387096770364204
+            }
+          },
+          "meteor": 0.7681159420289855
+        }
+      }
+    ],
+    "_id": "67f6bfa227d844c81dccd1f0"
+  },
+  {
+    "test_suite_id": "67f6c156381efe8a2bd8b325",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 00:20:31.089176",
+    "results": [
+      {
+        "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+        "expected_answer": "RAG enhances large language models by grounding their responses in external, up-to-date knowledge sources, retrieved by a dedicated component, leading to more accurate and informative outputs.",
+        "rag_response": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the model's internal knowledge (which may be outdated or incomplete), RAG first retrieves relevant information from a knowledge base, allowing the model to produce more accurate and informative responses.\n",
+        "success": true,
+        "explanation": "Response contains 77.78% of expected information",
+        "metrics": {
+          "bleu": 0.21292610790017363,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.3829787234042553,
+              "recall": 0.72,
+              "f1": 0.49999999546682095
+            },
+            "rouge-2": {
+              "precision": 0.22,
+              "recall": 0.44,
+              "f1": 0.2933333288888889
+            },
+            "rouge-l": {
+              "precision": 0.3617021276595745,
+              "recall": 0.68,
+              "f1": 0.47222221768904327
+            }
+          },
+          "meteor": 0.642387576219512
+        }
+      },
+      {
+        "question": "What are vector databases and what types of data do they handle?",
+        "expected_answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings representing semantic information about text, images, or other data.  They use these embeddings to capture meaning and relationships between data points.",
+        "rag_response": "Based on the provided text, vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings.  These embeddings represent the semantic information of text, images, or other data types in a numerical format that shows their meaning and relationships.\n",
+        "success": true,
+        "explanation": "Response contains 75.76% of expected information",
+        "metrics": {
+          "bleu": 0.4567441501659362,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.5945945945945946,
+              "recall": 0.6875,
+              "f1": 0.6376811544465449
+            },
+            "rouge-2": {
+              "precision": 0.4523809523809524,
+              "recall": 0.5588235294117647,
+              "f1": 0.4999999950554017
+            },
+            "rouge-l": {
+              "precision": 0.5945945945945946,
+              "recall": 0.6875,
+              "f1": 0.6376811544465449
+            }
+          },
+          "meteor": 0.782820351758794
+        }
+      },
+      {
+        "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+        "expected_answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) assessing document retrieval effectiveness, and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) evaluating generated text quality.  Additionally, RAG-specific metrics like faithfulness and relevance are employed to measure how well the generated response utilizes retrieved information and addresses the query.",
+        "rag_response": "Evaluation metrics for RAG systems include:\n\n* **Retrieval-focused metrics:** precision, recall, and mean reciprocal rank (MRR), assessing the relevance of retrieved documents.\n* **Generation-focused metrics:** BLEU, ROUGE, and METEOR, evaluating the quality of the generated text against reference answers.\n* **RAG-specific metrics:** faithfulness and relevance, measuring how well the generated response uses retrieved information and addresses the query.\n",
+        "success": true,
+        "explanation": "Response contains 71.11% of expected information",
+        "metrics": {
+          "bleu": 0.21889093511236005,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.5111111111111111,
+              "recall": 0.5348837209302325,
+              "f1": 0.5227272677298553
+            },
+            "rouge-2": {
+              "precision": 0.24561403508771928,
+              "recall": 0.2857142857142857,
+              "f1": 0.2641509384247064
+            },
+            "rouge-l": {
+              "precision": 0.4444444444444444,
+              "recall": 0.46511627906976744,
+              "f1": 0.4545454495480372
+            }
+          },
+          "meteor": 0.6909984686064319
+        }
+      },
+      {
+        "question": "What documents are required for customer identification when opening a savings account?",
+        "expected_answer": "A valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID is required.",
+        "rag_response": "Based on the \"Standard Operating Procedure for Opening a Savings Account\" document, the required documents for customer identification are a valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and a separate address proof.  The name and address on both documents must be verified.\n",
+        "success": true,
+        "explanation": "Response contains 80.00% of expected information",
+        "metrics": {
+          "bleu": 0.1923735396947251,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.21621621621621623,
+              "recall": 0.6153846153846154,
+              "f1": 0.31999999615200003
+            },
+            "rouge-2": {
+              "precision": 0.11363636363636363,
+              "recall": 0.38461538461538464,
+              "f1": 0.17543859297014472
+            },
+            "rouge-l": {
+              "precision": 0.1891891891891892,
+              "recall": 0.5384615384615384,
+              "f1": 0.27999999615200005
+            }
+          },
+          "meteor": 0.6815843621399178
+        }
+      },
+      {
+        "question": "What are the minimum income requirements for a salaried individual to be eligible for a personal loan?",
+        "expected_answer": "Salaried individuals must have a minimum monthly income of \u20b925,000.",
+        "rag_response": "Based on the provided text from \"Personal Loan Disbursement Guidelines (Retail Banking Division),\" the minimum monthly income requirement for a salaried individual to be eligible for a personal loan is \u20b925,000.\n",
+        "success": false,
+        "explanation": "Response only contains 63.64% of expected information",
+        "metrics": {
+          "bleu": 0.03392673192027677,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.1724137931034483,
+              "recall": 0.5,
+              "f1": 0.25641025259697575
+            },
+            "rouge-2": {
+              "precision": 0.06666666666666667,
+              "recall": 0.2222222222222222,
+              "f1": 0.10256409901380684
+            },
+            "rouge-l": {
+              "precision": 0.13793103448275862,
+              "recall": 0.4,
+              "f1": 0.20512820131492446
+            }
+          },
+          "meteor": 0.5514705882352943
+        }
+      },
+      {
+        "question": "What is the resolution timeline for ATM transaction disputes?",
+        "expected_answer": "Disputes must be resolved within 7 working days.",
+        "rag_response": "Based on the provided text from the \"Procedure for Handling ATM Disputes (Customer Service Manual),\" ATM transaction disputes must be resolved within **7 working days**.\n",
+        "success": true,
+        "explanation": "Response contains 100.00% of expected information",
+        "metrics": {
+          "bleu": 0.1361658548186748,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.25,
+              "recall": 0.75,
+              "f1": 0.3749999962500001
+            },
+            "rouge-2": {
+              "precision": 0.12,
+              "recall": 0.42857142857142855,
+              "f1": 0.1874999965820313
+            },
+            "rouge-l": {
+              "precision": 0.25,
+              "recall": 0.75,
+              "f1": 0.3749999962500001
+            }
+          },
+          "meteor": 0.7614942528735632
+        }
+      }
+    ],
+    "_id": "67f6c177381efe8a2bd8b32c"
+  },
+  {
+    "test_suite_id": "67f7cb5aaec2bd999841e336",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 19:14:58.156147",
+    "results": [],
+    "_id": "67f7cb5aaec2bd999841e337"
+  },
+  {
+    "test_suite_id": "67f7cbabb89cdba9c45398e3",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 19:16:19.731115",
+    "results": [],
+    "_id": "67f7cbabb89cdba9c45398e4"
+  },
+  {
+    "test_suite_id": "67f7cd48825acfaf9bd1afed",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 19:23:12.734031",
+    "results": [],
+    "_id": "67f7cd48825acfaf9bd1afee"
+  },
+  {
+    "test_suite_id": "67f7dae29788850364969532",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 20:21:14.984546",
+    "results": [],
+    "_id": "67f7dae29788850364969533"
+  },
+  {
+    "test_suite_id": "67f7dbe12c4b6ac259dffd7c",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 20:25:29.767584",
+    "results": [],
+    "_id": "67f7dbe12c4b6ac259dffd7d"
+  },
+  {
+    "test_suite_id": "67f7ddd03124a31747f0dbd4",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 20:33:44.917363",
+    "results": [],
+    "_id": "67f7ddd03124a31747f0dbd5"
+  },
+  {
+    "test_suite_id": "67f7dea72004fdec43a1ece1",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 20:37:19.088718",
+    "results": [],
+    "_id": "67f7dea72004fdec43a1ece2"
+  },
+  {
+    "test_suite_id": "67f7e14f30c10de47a0034b0",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 20:48:39.655344",
+    "results": [],
+    "_id": "67f7e14f30c10de47a0034b1"
+  },
+  {
+    "test_suite_id": "67f7e5c9aba52edbe1e1d3d6",
+    "llm_name": "Gemini 1.5 Flash",
+    "timestamp": "2025-04-10 21:08:44.937748",
+    "results": [
+      {
+        "question": "How does the Retrieval-Augmented Generation (RAG) approach improve upon traditional large language models?",
+        "expected_answer": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources, thus addressing limitations and producing more accurate and informative responses.",
+        "rag_response": "RAG improves upon traditional large language models by grounding their generations in external, up-to-date knowledge sources.  Instead of relying solely on the knowledge embedded within the model itself (which can be outdated or incomplete), RAG first retrieves relevant information from a knowledge base, allowing the generative model to produce more accurate and informative responses.\n",
+        "success": true,
+        "explanation": "Response contains 85.19% of expected information",
+        "metrics": {
+          "bleu": 0.33765096249731313,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.40816326530612246,
+              "recall": 0.8,
+              "f1": 0.540540536066472
+            },
+            "rouge-2": {
+              "precision": 0.3333333333333333,
+              "recall": 0.72,
+              "f1": 0.4556961982054159
+            },
+            "rouge-l": {
+              "precision": 0.40816326530612246,
+              "recall": 0.8,
+              "f1": 0.540540536066472
+            }
+          },
+          "meteor": 0.7636770186335403
+        }
+      },
+      {
+        "question": "What are vector databases and what are some examples?",
+        "expected_answer": "Vector databases are specialized database systems that store and efficiently query high-dimensional vector embeddings, representing semantic information numerically.  Examples include Pinecone, Weaviate, Milvus, and ChromaDB.",
+        "rag_response": "Vector databases are specialized database systems designed to store and efficiently query high-dimensional vector embeddings.  These embeddings represent the semantic meaning and relationships of data like text and images in a numerical format.  Examples of popular vector databases include Pinecone, Weaviate, Milvus, and ChromaDB.\n",
+        "success": true,
+        "explanation": "Response contains 84.00% of expected information",
+        "metrics": {
+          "bleu": 0.3915760354557995,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.5,
+              "recall": 0.7916666666666666,
+              "f1": 0.6129032210613945
+            },
+            "rouge-2": {
+              "precision": 0.3409090909090909,
+              "recall": 0.625,
+              "f1": 0.44117646602076127
+            },
+            "rouge-l": {
+              "precision": 0.5,
+              "recall": 0.7916666666666666,
+              "f1": 0.6129032210613945
+            }
+          },
+          "meteor": 0.8084757459214688
+        }
+      },
+      {
+        "question": "What types of metrics are used to evaluate Retrieval Augmented Generation (RAG) systems?",
+        "expected_answer": "RAG systems are evaluated using retrieval-focused metrics (e.g., precision, recall, MRR) which assess document retrieval, and generation-focused metrics (e.g., BLEU, ROUGE, METEOR) which assess the quality of the generated text.  Additionally, RAG-specific metrics like faithfulness and relevance are used.",
+        "rag_response": "Evaluation metrics for RAG systems fall into three categories:\n\n1. **Retrieval-focused metrics:** These assess the quality of the retrieved documents, including precision, recall, and mean reciprocal rank (MRR).\n\n2. **Generation-focused metrics:** These evaluate the quality of the generated text itself, using metrics like BLEU, ROUGE, and METEOR.\n\n3. **RAG-specific metrics:** These focus on the interplay between retrieval and generation, such as faithfulness (how well the generation reflects the retrieved information) and relevance (how well the generation addresses the original query).\n",
+        "success": true,
+        "explanation": "Response contains 80.00% of expected information",
+        "metrics": {
+          "bleu": 0.12781361360440752,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.3050847457627119,
+              "recall": 0.5454545454545454,
+              "f1": 0.39130434322542534
+            },
+            "rouge-2": {
+              "precision": 0.15492957746478872,
+              "recall": 0.2894736842105263,
+              "f1": 0.20183485784361593
+            },
+            "rouge-l": {
+              "precision": 0.2711864406779661,
+              "recall": 0.48484848484848486,
+              "f1": 0.34782608235586016
+            }
+          },
+          "meteor": 0.5305049844327834
+        }
+      },
+      {
+        "question": "What documents are required for customer identification when opening a savings account?",
+        "expected_answer": "Valid government-issued ID such as Aadhaar, PAN, Passport, or Voter ID.",
+        "rag_response": "Based on the \"Standard Operating Procedure for Opening a Savings Account\" document, the required documents for customer identification are a valid government-issued ID (Aadhaar, PAN, Passport, or Voter ID) and a separate document providing the customer's name and address.\n",
+        "success": true,
+        "explanation": "Response contains 83.33% of expected information",
+        "metrics": {
+          "bleu": 0.18716424886481792,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.17647058823529413,
+              "recall": 0.6,
+              "f1": 0.27272726921487606
+            },
+            "rouge-2": {
+              "precision": 0.10256410256410256,
+              "recall": 0.4,
+              "f1": 0.16326530287380264
+            },
+            "rouge-l": {
+              "precision": 0.17647058823529413,
+              "recall": 0.6,
+              "f1": 0.27272726921487606
+            }
+          },
+          "meteor": 0.7021803447388733
+        }
+      },
+      {
+        "question": "What are the minimum eligibility requirements for a personal loan under these guidelines?",
+        "expected_answer": "A minimum monthly income of \u20b925,000, age between 21 and 60 years, and a credit score above 700.",
+        "rag_response": "Based on the provided \"Personal Loan Disbursement Guidelines,\" the minimum eligibility requirements for a personal loan are:\n\n* **Minimum monthly income:** \u20b925,000\n* **Age:** 21-60 years\n* **Credit score:** Above 700\n",
+        "success": false,
+        "explanation": "Response only contains 66.67% of expected information",
+        "metrics": {
+          "bleu": 0.030526992108938653,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.14285714285714285,
+              "recall": 0.23529411764705882,
+              "f1": 0.17777777307654333
+            },
+            "rouge-2": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "rouge-l": {
+              "precision": 0.10714285714285714,
+              "recall": 0.17647058823529413,
+              "f1": 0.13333332863209893
+            }
+          },
+          "meteor": 0.42770804277080426
+        }
+      },
+      {
+        "question": "What is the resolution timeline for ATM transaction disputes?",
+        "expected_answer": "Disputes must be resolved within 7 working days.",
+        "rag_response": "Based on the provided text from the \"Procedure for Handling ATM Disputes (Customer Service Manual)\", ATM transaction disputes must be resolved within **7 working days**.\n",
+        "success": true,
+        "explanation": "Response contains 100.00% of expected information",
+        "metrics": {
+          "bleu": 0.1361658548186748,
+          "rouge": {
+            "rouge-1": {
+              "precision": 0.25,
+              "recall": 0.75,
+              "f1": 0.3749999962500001
+            },
+            "rouge-2": {
+              "precision": 0.12,
+              "recall": 0.42857142857142855,
+              "f1": 0.1874999965820313
+            },
+            "rouge-l": {
+              "precision": 0.25,
+              "recall": 0.75,
+              "f1": 0.3749999962500001
+            }
+          },
+          "meteor": 0.7614942528735632
+        }
+      }
+    ],
+    "_id": "67f7e604aba52edbe1e1d3dd"
+  }
+]
